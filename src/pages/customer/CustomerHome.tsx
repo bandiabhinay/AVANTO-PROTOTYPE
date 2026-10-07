@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Mic, MessageSquare, Camera, Heart, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -182,7 +182,7 @@ export default function CustomerHome() {
         <motion.section variants={itemVariants}>
           <h2 className="text-base font-bold text-[#172033] mb-4">Recently Viewed</h2>
           <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 snap-x hide-scrollbar">
-            {products.slice().reverse().map(product => (
+            {products.slice().reverse().map((product: any) => (
               <div key={`recent-${product.id}`} className="min-w-[140px] max-w-[140px] snap-start">
                 <div className="bg-white rounded-xl overflow-hidden shadow-sm p-1.5 flex gap-2 items-center">
                   <img src={product.image} alt={product.name} className="w-12 h-12 rounded-lg object-cover" />

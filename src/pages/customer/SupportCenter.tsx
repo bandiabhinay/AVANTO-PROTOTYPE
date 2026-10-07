@@ -1,4 +1,3 @@
-import React from 'react';
 import { Package, CreditCard, Truck, RotateCcw, HelpCircle, MessageCircle, Phone, ChevronRight, Search } from 'lucide-react';
 
 const SupportCenter = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, Trash2, ShieldCheck, ShoppingCart, Minus, Plus } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -38,11 +37,11 @@ export default function CartPage() {
         {mockCartItems.map((item, idx) => (
           <motion.div key={idx} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.1 }} className="bg-white rounded-2xl p-4 shadow-sm flex gap-4">
             <div className="w-20 h-24 bg-gray-100 rounded-lg overflow-hidden shrink-0">
-              <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover" />
+              <img src={item.product?.images[0] || ''} alt={item.product?.name || 'Product'} className="w-full h-full object-cover" />
             </div>
             <div className="flex-1 flex flex-col">
               <div className="flex justify-between items-start mb-1">
-                <h3 className="font-medium text-gray-900 text-sm line-clamp-2">{item.name}</h3>
+                <h3 className="font-medium text-gray-900 text-sm line-clamp-2">{item.product?.name}</h3>
                 <button className="text-gray-400 hover:text-red-500">
                   <Trash2 className="w-4 h-4" />
                 </button>

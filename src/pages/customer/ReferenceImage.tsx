@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Upload, Camera, Image as ImageIcon, X, Shield, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';

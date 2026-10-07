@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, MapPin, Package, Check, ArrowRight, X } from 'lucide-react';
+import { MapPin, Package, Check, ArrowRight, X } from 'lucide-react';
 
 const tabs = ['All', 'New', 'Accepted', 'Preparing', 'Ready', 'Dispatched', 'Delivered', 'Returns'];
 

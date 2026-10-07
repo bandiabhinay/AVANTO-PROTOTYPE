@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Bell, Package, CheckCircle, AlertTriangle, Tag, Check, CheckCheck } from 'lucide-react';
+import { useState } from 'react';
+import { Bell, Package, CheckCircle, AlertTriangle, Tag, CheckCheck } from 'lucide-react';
 
 const mockNotifications = [
   { id: 'NOT-1', type: 'order_status', title: 'Order Dispatched', message: 'Your order ORD-8923 has been dispatched and is on its way.', time: '2 hours ago', read: false, date: 'Today' },

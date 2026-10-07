@@ -1,4 +1,4 @@
-import { Product, Category, ProductMatch, ShoppingRequirement, Order, EarningsData, Notification, Address, CartItem, User, SupportTicket } from '../types';
+import type { Product, Category, ProductMatch, ShoppingRequirement, Order, EarningsData, Notification, Address, CartItem, User, SupportTicket } from '../types';
 
 // Mock Categories
 export const mockCategories: Category[] = [

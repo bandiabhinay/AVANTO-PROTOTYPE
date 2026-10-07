@@ -63,7 +63,7 @@ export default function SlideSection({
       scale: 1,
       transition: {
         duration: shouldReduceMotion ? 0.35 : 0.8,
-        ease: [0.22, 1, 0.36, 1], // Apple / Tesla smooth presentation curve
+        ease: [0.22, 1, 0.36, 1] as const, // Apple / Tesla smooth presentation curve
       },
     },
   }

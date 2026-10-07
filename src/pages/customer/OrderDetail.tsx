@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Copy, MapPin, CreditCard, RefreshCcw, HelpCircle, Package, Truck, Check } from 'lucide-react';
+import { Copy, MapPin, CreditCard, RefreshCcw, HelpCircle, Truck } from 'lucide-react';
 
 const OrderDetail = () => {
   const timeline = [

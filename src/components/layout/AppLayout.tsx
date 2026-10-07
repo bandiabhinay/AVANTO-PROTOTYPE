@@ -20,7 +20,7 @@ const roleMap: Record<AppLayoutProps['role'], 'CUSTOMER' | 'MEMBER' | 'SUPPLIER'
   admin: 'ADMIN',
 };
 
-export default function AppLayout({ role, onRoleChange }: AppLayoutProps) {
+export default function AppLayout({ role, onRoleChange: _onRoleChange }: AppLayoutProps) {
   const mappedRole = roleMap[role] || 'CUSTOMER';
   const showBottomNav = role === 'customer' || role === 'member';
 

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Check, Star, ArrowRight, ShieldCheck, Clock, CheckCircle2 } from 'lucide-react'
 
 const benefits = [

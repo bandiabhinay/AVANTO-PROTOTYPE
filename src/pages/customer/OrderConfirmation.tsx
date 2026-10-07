@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, Package, Calendar, ChevronRight } from 'lucide-react';
+import { Check, Calendar } from 'lucide-react';
 
 const OrderConfirmation = () => {
   const [showConfetti, setShowConfetti] = useState(true);

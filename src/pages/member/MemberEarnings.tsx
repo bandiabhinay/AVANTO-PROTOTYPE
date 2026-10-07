@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Clock, CheckCircle2, Lock, ArrowDownToLine, Filter } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { Clock, CheckCircle2, Lock, ArrowDownToLine } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const MemberEarnings = () => {

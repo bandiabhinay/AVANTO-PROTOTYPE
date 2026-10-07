@@ -50,7 +50,7 @@ const OnboardingScreen: React.FC = () => {
     navigate('/login');
   };
 
-  const onDragEnd = (event: any, info: any) => {
+  const onDragEnd = (_event: any, info: any) => {
     if (info.offset.x < -50 && currentIndex < onboardingData.length - 1) {
       setCurrentIndex(prev => prev + 1);
     } else if (info.offset.x > 50 && currentIndex > 0) {

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Plus, Search, Filter, LayoutGrid, List, MoreVertical, Edit, Trash, Copy } from 'lucide-react';
+import { Plus, Search, Filter, LayoutGrid, List, MoreVertical } from 'lucide-react';
 
 const mockProducts = [
   { id: 'PRD-101', name: 'Premium Cotton T-Shirt', category: 'Apparel', variants: 4, price: 999, status: 'Active', stock: 'In Stock', image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=200&h=200' },

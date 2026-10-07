@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function SkeletonLine({ className = '' }: { className?: string }) {
   return (
     <div className={`h-4 bg-gray-200 rounded animate-pulse ${className}`} />

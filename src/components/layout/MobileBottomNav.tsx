@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Home, Wand2, Package, Heart, User, MessageSquare, ShoppingBag } from 'lucide-react';
 import { motion } from 'framer-motion';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, Shield, Lock, CreditCard, Building2, Smartphone, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';

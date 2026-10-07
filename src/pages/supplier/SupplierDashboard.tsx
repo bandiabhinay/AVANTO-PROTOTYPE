@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Package, Clock, AlertTriangle, ShoppingCart, RotateCcw, IndianRupee, ChevronRight, TrendingUp } from 'lucide-react';
+import { Package, Clock, AlertTriangle, ShoppingCart, RotateCcw, IndianRupee, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const stats = [

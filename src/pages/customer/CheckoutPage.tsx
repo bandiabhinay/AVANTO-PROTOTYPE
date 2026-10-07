@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, MapPin, Truck, CreditCard, CheckCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -48,7 +48,7 @@ export default function CheckoutPage() {
               <button onClick={() => navigate('/address')} className="text-primary-600 text-sm font-medium">Change</button>
             </div>
             <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
-              <h3 className="font-medium text-gray-900">{address.name}</h3>
+              <h3 className="font-medium text-gray-900">{address.fullName}</h3>
               <p className="text-sm text-gray-600 mt-1">{address.addressLine1}, {address.city}</p>
               <p className="text-sm text-gray-600">{address.state} - {address.pincode}</p>
               <p className="text-sm text-gray-600 mt-1">{address.phone}</p>
@@ -84,9 +84,9 @@ export default function CheckoutPage() {
             <div className="space-y-3 mb-4">
               {mockCartItems.map((item, i) => (
                 <div key={i} className="flex gap-3 text-sm">
-                  <img src={item.imageUrl} className="w-12 h-12 rounded object-cover" alt="" />
+                  <img src={item.product?.images[0] || ''} className="w-12 h-12 rounded object-cover" alt="" />
                   <div className="flex-1">
-                    <p className="font-medium line-clamp-1">{item.name}</p>
+                    <p className="font-medium line-clamp-1">{item.product?.name}</p>
                     <p className="text-gray-500">Qty: {item.quantity}</p>
                   </div>
                   <p className="font-medium">₹{item.price}</p>

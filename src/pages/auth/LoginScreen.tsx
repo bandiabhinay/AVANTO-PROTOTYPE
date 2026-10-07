@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Eye, EyeOff, Mail, Phone } from 'lucide-react';
+import { Eye, EyeOff, Mail } from 'lucide-react';
 
 const LoginScreen: React.FC = () => {
   const [loginMethod, setLoginMethod] = useState<'email' | 'phone'>('email');

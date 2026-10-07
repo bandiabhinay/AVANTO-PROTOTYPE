@@ -1,4 +1,3 @@
-import React from 'react';
 import { Share2, Edit, Sparkles, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 

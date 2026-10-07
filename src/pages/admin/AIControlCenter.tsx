@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Zap, Clock, IndianRupee, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { Brain, Zap, IndianRupee, Clock, CheckCircle } from 'lucide-react';
 
 const AIControlCenter: React.FC = () => {
   const [toggles, setToggles] = useState({

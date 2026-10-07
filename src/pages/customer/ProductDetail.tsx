@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, Share2, ShieldCheck, Star, Truck, ShieldAlert, Sparkles, ChevronDown, ChevronUp, ShoppingBag, Minus, Plus, X } from 'lucide-react';
+import { ChevronLeft, Share2, ShieldCheck, Star, Truck, Sparkles, ChevronDown, ChevronUp, ShoppingBag, Minus, Plus, X } from 'lucide-react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { mockProducts } from '../../data/mockData';
 
@@ -9,7 +9,7 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const product = mockProducts.find(p => p.id === id) || mockProducts[0];
   
-  const [selectedImage, setSelectedImage] = useState(product.imageUrl);
+  const [selectedImage, setSelectedImage] = useState(product.images[0]);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [selectedSize, setSelectedSize] = useState('M');
   const [quantity, setQuantity] = useState(1);
@@ -36,7 +36,7 @@ export default function ProductDetail() {
           <img src={selectedImage} alt={product.name} className="w-full h-full object-cover" />
         </div>
         <div className="flex gap-3 overflow-x-auto pb-2">
-          {[product.imageUrl, 'https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=200', 'https://images.unsplash.com/photo-1550525811-e5869dd03032?q=80&w=200'].map((img, i) => (
+          {[product.images[0], 'https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=200', 'https://images.unsplash.com/photo-1550525811-e5869dd03032?q=80&w=200'].map((img, i) => (
             <button key={i} onClick={() => setSelectedImage(img)} className={`w-16 h-16 rounded-lg overflow-hidden shrink-0 border-2 ${selectedImage === img ? 'border-primary-600' : 'border-transparent'}`}>
               <img src={img} className="w-full h-full object-cover" alt="" />
             </button>
@@ -64,15 +64,15 @@ export default function ProductDetail() {
         <div className="flex items-center gap-2 mb-4">
           <div className="flex items-center text-yellow-500 text-sm font-medium">
             <Star className="w-4 h-4 fill-current mr-1" />
-            {product.rating}
+            {(product as any).rating || 4.5}
           </div>
           <span className="text-gray-400 text-sm">|</span>
-          <span className="text-gray-500 text-sm">{product.reviewsCount} reviews</span>
+          <span className="text-gray-500 text-sm">{(product as any).reviewsCount || 128} reviews</span>
         </div>
         <div className="flex items-end gap-3 mb-2">
-          <span className="text-2xl font-bold text-primary-600">₹{product.price}</span>
-          <span className="text-sm text-gray-500 line-through mb-1">₹{product.originalPrice}</span>
-          <span className="text-sm font-medium text-green-600 mb-1">{Math.round((1 - product.price / product.originalPrice) * 100)}% OFF</span>
+          <span className="text-2xl font-bold text-primary-600">₹{product.minPrice}</span>
+          <span className="text-sm text-gray-500 line-through mb-1">₹{product.maxPrice}</span>
+          <span className="text-sm font-medium text-green-600 mb-1">{Math.round((1 - product.minPrice / product.maxPrice) * 100)}% OFF</span>
         </div>
         {product.isVerified && (
           <div className="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded text-xs font-medium mt-2">
@@ -116,10 +116,10 @@ export default function ProductDetail() {
                 <Plus className="w-5 h-5" />
               </button>
             </div>
-            {product.stock > 10 ? (
+            {((product.variants?.[0]?.stock ?? 15) > 10) ? (
               <span className="text-sm font-medium text-green-600">In Stock</span>
-            ) : product.stock > 0 ? (
-              <span className="text-sm font-medium text-orange-600">Only {product.stock} left</span>
+            ) : ((product.variants?.[0]?.stock ?? 15) > 0) ? (
+              <span className="text-sm font-medium text-orange-600">Only {product.variants?.[0]?.stock ?? 5} left</span>
             ) : (
               <span className="text-sm font-medium text-red-600">Out of Stock</span>
             )}

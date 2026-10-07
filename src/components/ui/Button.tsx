@@ -1,15 +1,16 @@
-import React from 'react';
-import { motion, HTMLMotionProps } from 'framer-motion';
+import type { ReactNode } from 'react';
+import { motion, type HTMLMotionProps } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
 
-export interface ButtonProps extends Omit<HTMLMotionProps<"button">, "disabled"> {
+export interface ButtonProps extends Omit<HTMLMotionProps<"button">, "disabled" | "children"> {
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost' | 'ai';
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
   disabled?: boolean;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
+  leftIcon?: ReactNode;
+  rightIcon?: ReactNode;
   fullWidth?: boolean;
+  children?: ReactNode;
 }
 
 export default function Button({

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Search, Filter, ChevronRight, MoreHorizontal, MessageSquare } from 'lucide-react';
+import { useState } from 'react';
+import { Search, Filter, ChevronRight, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const TABS = ['All', 'New', 'Needs Clarification', 'Ready to Match', 'Selection Prepared', 'Awaiting Review', 'Shared', 'Ordered', 'Closed'];

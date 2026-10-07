@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, X, AlertTriangle, ChevronRight, ExternalLink, ShieldCheck } from 'lucide-react';
+import { Check, X, AlertTriangle, ExternalLink, ShieldCheck } from 'lucide-react';
 
 const mockApprovals = [
   { 
@@ -33,7 +33,7 @@ const CatalogApproval: React.FC = () => {
   const [approvals, setApprovals] = useState(mockApprovals);
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
 
-  const handleAction = (id: string, action: 'Approve' | 'Reject' | 'Request Changes') => {
+  const handleAction = (id: string, _action: 'Approve' | 'Reject' | 'Request Changes') => {
     setApprovals(prev => prev.filter(p => p.id !== id));
     if (selectedProduct === id) setSelectedProduct(null);
   };

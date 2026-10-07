@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   ArrowRight,
@@ -9,7 +9,6 @@ import {
   Navigation,
   ShieldCheck,
   Headphones,
-  CheckCircle2,
   Sparkles,
   Zap,
 } from 'lucide-react'

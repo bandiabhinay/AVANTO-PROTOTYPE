@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, Plus, Edit2, Trash2, MapPin, Check } from 'lucide-react';
+import { ChevronLeft, Plus, Edit2, Trash2, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { mockAddresses } from '../../data/mockData';
 
@@ -35,7 +35,7 @@ export default function AddressScreen() {
               <div className="flex-1">
                 <div className="flex justify-between items-start mb-1">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-semibold text-gray-900">{addr.name}</h3>
+                    <h3 className="font-semibold text-gray-900">{addr.fullName}</h3>
                     {addr.isDefault && <span className="bg-gray-100 text-gray-600 text-[10px] px-2 py-0.5 rounded uppercase font-bold">Default</span>}
                   </div>
                   <div className="flex gap-2">

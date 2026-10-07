@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Eye, EyeOff, Mail, Phone, User } from 'lucide-react';
+import { Eye, EyeOff, Mail, User } from 'lucide-react';
 
 const SignupScreen: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);

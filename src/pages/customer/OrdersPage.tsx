@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Package, Truck, CheckCircle2, Clock, XCircle, ChevronRight } from 'lucide-react';
 import { mockOrders } from '../../data/mockData';
 
@@ -13,9 +13,11 @@ const OrdersPage = () => {
 
   const getStatusBadge = (status: string) => {
     switch (status.toLowerCase()) {
-      case 'in-transit': return <span className="bg-blue-50 text-blue-600 px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1"><Truck size={12}/> In Transit</span>;
+      case 'in-transit':
+      case 'in_transit': return <span className="bg-blue-50 text-blue-600 px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1"><Truck size={12}/> In Transit</span>;
       case 'delivered': return <span className="bg-green-50 text-success px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1"><CheckCircle2 size={12}/> Delivered</span>;
-      case 'processing': return <span className="bg-amber-50 text-amber-600 px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1"><Clock size={12}/> Processing</span>;
+      case 'processing':
+      case 'preparing': return <span className="bg-amber-50 text-amber-600 px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1"><Clock size={12}/> Processing</span>;
       case 'cancelled': return <span className="bg-red-50 text-error px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1"><XCircle size={12}/> Cancelled</span>;
       default: return null;
     }
@@ -23,9 +25,10 @@ const OrdersPage = () => {
 
   // Mock filtering
   const filteredOrders = mockOrders?.filter(o => {
-    if (activeTab === 'active') return ['processing', 'in-transit'].includes(o.status.toLowerCase());
-    if (activeTab === 'completed') return o.status.toLowerCase() === 'delivered';
-    if (activeTab === 'cancelled') return o.status.toLowerCase() === 'cancelled';
+    const status = (o.orderStatus || (o as any).status || '').toLowerCase();
+    if (activeTab === 'active') return ['processing', 'preparing', 'in_transit', 'in-transit', 'placed'].includes(status);
+    if (activeTab === 'completed') return status === 'delivered';
+    if (activeTab === 'cancelled') return status === 'cancelled';
     return true;
   }) || [];
 
@@ -61,18 +64,18 @@ const OrdersPage = () => {
               <div className="flex justify-between items-center mb-4 border-b border-gray-50 pb-3">
                 <div>
                   <span className="text-xs text-gray-500 font-medium">#{order.id}</span>
-                  <p className="text-sm text-gray-900">{order.date}</p>
+                  <p className="text-sm text-gray-900">{order.createdAt}</p>
                 </div>
-                {getStatusBadge(order.status)}
+                {getStatusBadge(order.orderStatus)}
               </div>
               
               <div className="flex gap-4 mb-4">
                 <div className="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
-                  <img src={order.items[0]?.image || "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=150&h=150"} alt="Product" className="w-full h-full object-cover" />
+                  <img src={order.items[0]?.productImage || "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=150&h=150"} alt="Product" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1 flex flex-col justify-center">
-                  <h3 className="font-medium text-gray-900 text-sm line-clamp-2">{order.items[0]?.name || 'Nike Air Max 270'}</h3>
-                  <p className="text-xs text-gray-500 mt-1">{order.items[0]?.variant || 'Size: US 10 • Black/White'}</p>
+                  <h3 className="font-medium text-gray-900 text-sm line-clamp-2">{order.items[0]?.productName || 'Nike Air Max 270'}</h3>
+                  <p className="text-xs text-gray-500 mt-1">{order.items[0]?.variantDescription || 'Size: US 10 • Black/White'}</p>
                   <p className="font-semibold text-gray-900 mt-2">₹{order.total}</p>
                 </div>
               </div>

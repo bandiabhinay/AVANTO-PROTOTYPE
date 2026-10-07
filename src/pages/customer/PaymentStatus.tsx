@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, XCircle, Clock, ChevronRight } from 'lucide-react';
+import { CheckCircle, XCircle, Clock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function PaymentStatus() {
   const navigate = useNavigate();
   // In real app, this would come from router state or API polling
-  const [status, setStatus] = useState<'success' | 'failed' | 'pending'>('success');
+  const [status] = useState<'success' | 'failed' | 'pending'>('success');
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">

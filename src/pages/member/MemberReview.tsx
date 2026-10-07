@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, Edit2, CheckCircle2, RefreshCw, MessageSquarePlus, Sparkles } from 'lucide-react';
 import MarginAssistant from './MarginAssistant';
 
