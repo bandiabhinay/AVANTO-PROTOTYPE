@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  /* Avanto Brand Colors */
+  --color-avanto-blue: #1769FF;
+  --color-avanto-navy: #101936;
+  --color-avanto-bg: #F5F7FC;
+  --color-avanto-white: #FFFFFF;
+  --color-avanto-accent: #38BDF8;
+
+  --color-primary: #1769FF;
+  --color-primary-50: #EBF2FF;
+  --color-primary-100: #D6E4FF;
+  --color-primary-200: #ADC9FF;
+  --color-primary-300: #85AEFF;
+  --color-primary-400: #5C93FF;
+  --color-primary-500: #1769FF;
+  --color-primary-600: #1255D4;
+  --color-primary-700: #0D41A9;
+  --color-primary-800: #092D7E;
+  --color-primary-900: #041953;
+
+  --color-dark: #101936;
+  --color-surface: #F5F7FC;
+  --color-text-primary: #101936;
+  --color-text-secondary: #64748B;
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
+
+  --color-accent: #38BDF8;
+  --color-success: #10B981;
+  --color-success-50: #ECFDF5;
+  --color-warning: #F59E0B;
+  --color-warning-50: #FFFBEB;
+  --color-error: #EF4444;
+  --color-error-50: #FEF2F2;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Border Radius */
+  --radius-card: 16px;
+  --radius-card-lg: 24px;
+  --radius-button: 12px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(16, 25, 54, 0.05), 0 1px 2px rgba(16, 25, 54, 0.03);
+  --shadow-card-hover: 0 10px 30px rgba(16, 25, 54, 0.08), 0 2px 8px rgba(16, 25, 54, 0.04);
+  --shadow-elevated: 0 20px 40px rgba(16, 25, 54, 0.12), 0 4px 12px rgba(16, 25, 54, 0.06);
+  --shadow-glow: 0 0 25px rgba(23, 105, 255, 0.35);
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.4s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-float: float 3.5s ease-in-out infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  min-height: 100dvh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-dark {
+  background: rgba(16, 25, 54, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Gradient utilities */
+.gradient-avanto {
+  background: linear-gradient(135deg, #1769FF 0%, #38BDF8 100%);
+}
+.gradient-avanto-dark {
+  background: linear-gradient(145deg, #101936 0%, #162044 50%, #0d152c 100%);
+}
+.gradient-avanto-text {
+  background: linear-gradient(135deg, #1769FF 0%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

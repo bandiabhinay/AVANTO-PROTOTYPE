@@ -1,0 +1,19 @@
+{
+  "name": "ATTNS AI Commerce",
+  "short_name": "ATTNS AI",
+  "description": "AI-powered personal shopping and selling platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F8FC",
+  "theme_color": "#2563EB",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "categories": ["shopping", "business"],
+  "lang": "en"
+}
