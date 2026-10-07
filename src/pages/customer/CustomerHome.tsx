@@ -17,7 +17,7 @@ const fallbackProducts = [
   { id: '1', name: 'Cotton Blue Kurti with Embroidery', price: 1299, image: 'https://images.unsplash.com/photo-1583391733958-d25e0a46636c?auto=format&fit=crop&w=300&q=80', deliveryEstimate: 'Tomorrow, by 9 PM' },
   { id: '2', name: 'Wireless Noise-Cancelling Headphones', price: 4500, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80', deliveryEstimate: 'In 2 days' },
   { id: '3', name: 'Ceramic Coffee Mug Set', price: 899, image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=300&q=80', deliveryEstimate: 'Tomorrow' },
-  { id: '4', name: 'Men\\'s Black Formal Shoes', price: 2100, image: 'https://images.unsplash.com/photo-1614252339460-e1709424e6a8?auto=format&fit=crop&w=300&q=80', deliveryEstimate: 'In 3 days' },
+  { id: '4', name: "Men's Black Formal Shoes", price: 2100, image: 'https://images.unsplash.com/photo-1614252339460-e1709424e6a8?auto=format&fit=crop&w=300&q=80', deliveryEstimate: 'In 3 days' },
 ];
 
 const categories = mockCategories || fallbackCategories;
