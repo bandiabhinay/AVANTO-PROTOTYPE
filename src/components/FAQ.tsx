@@ -57,7 +57,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#1769FF] bg-[#1769FF]/10 mb-3 border border-[#1769FF]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E53935] bg-[#E53935]/10 mb-3 border border-[#E53935]/20">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Got Questions?</span>
           </div>
@@ -81,13 +81,13 @@ export default function FAQ() {
                 <button
                   type="button"
                   onClick={() => toggle(index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-[#101936] hover:text-[#1769FF] transition-colors cursor-pointer"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-[#101936] hover:text-[#E53935] transition-colors cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'bg-[#1769FF] text-white rotate-180' : 'bg-gray-100 text-gray-600'
+                      isOpen ? 'bg-[#E53935] text-white rotate-180' : 'bg-gray-100 text-gray-600'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />

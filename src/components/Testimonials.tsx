@@ -46,7 +46,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#1769FF] bg-[#1769FF]/10 mb-3 border border-[#1769FF]/20">
+          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E53935] bg-[#E53935]/10 mb-3 border border-[#E53935]/20">
             Rider Stories
           </span>
           <h2 className="text-4xl sm:text-5xl font-black text-[#101936] tracking-tight">
@@ -73,7 +73,7 @@ export default function Testimonials() {
                       <Star key={i} className="w-4 h-4 fill-amber-400" />
                     ))}
                   </div>
-                  <Quote className="w-6 h-6 text-[#1769FF]/30" />
+                  <Quote className="w-6 h-6 text-[#E53935]/30" />
                 </div>
 
                 <p className="text-sm text-gray-700 leading-relaxed italic mb-6">

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
@@ -14,10 +14,16 @@ import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
 import BookingModal from './components/BookingModal'
 import SlideSection from './components/SlideSection'
+import StartupAnimation from './components/StartupAnimation'
 
 export default function App() {
+  const [isStartupDone, setIsStartupDone] = useState(false)
   const [isBookingOpen, setIsBookingOpen] = useState(false)
   const [selectedRideType, setSelectedRideType] = useState('go')
+
+  const handleStartupComplete = useCallback(() => {
+    setIsStartupDone(true)
+  }, [])
 
   const handleOpenBooking = (rideType?: string) => {
     if (rideType) {
@@ -34,7 +40,14 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5F7FC] text-[#101936] antialiased selection:bg-[#1769FF] selection:text-white overflow-x-hidden">
+    <>
+      {/* Full-screen startup vehicle animation on every page load/refresh */}
+      {!isStartupDone && (
+        <StartupAnimation onComplete={handleStartupComplete} />
+      )}
+
+      {isStartupDone && (
+        <div className="min-h-screen bg-[#F5F7FC] text-[#101936] antialiased selection:bg-[#E53935] selection:text-white overflow-x-hidden animate-fade-in">
       {/* Sticky & Floating Glass Navigation */}
       <Navbar onOpenBooking={() => handleOpenBooking('go')} />
 
@@ -111,5 +124,7 @@ export default function App() {
         initialRideType={selectedRideType}
       />
     </div>
+      )}
+    </>
   )
 }

@@ -7,16 +7,16 @@ const pillars = [
     title: 'Customer First',
     subtitle: 'Rider Community',
     description: 'Dependable daily commutes, upfront transparent fares without surge tricks, and courteous service on every booking.',
-    accent: 'border-blue-200 bg-blue-50/50',
-    iconBg: 'bg-[#1769FF]/10 text-[#1769FF]',
+    accent: 'border-red-200 bg-red-50/50',
+    iconBg: 'bg-[#E53935]/10 text-[#E53935]',
   },
   {
     icon: Car,
     title: 'Captain Empowered',
     subtitle: 'Driver Dignity',
     description: 'Guaranteed payouts, low commission structures, accident insurance, and respect for our hardworking partner captains.',
-    accent: 'border-indigo-200 bg-indigo-50/50',
-    iconBg: 'bg-indigo-600/10 text-indigo-600',
+    accent: 'border-rose-200 bg-rose-50/50',
+    iconBg: 'bg-rose-600/10 text-rose-600',
   },
   {
     icon: HeartHandshake,
@@ -34,7 +34,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#1769FF] bg-[#1769FF]/10 mb-3 border border-[#1769FF]/20">
+          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E53935] bg-[#E53935]/10 mb-3 border border-[#E53935]/20">
             About Avanto
           </span>
           <h2 className="text-4xl sm:text-5xl font-black text-[#101936] tracking-tight">
@@ -73,7 +73,7 @@ export default function About() {
         </div>
 
         {/* Mission Statement Banner */}
-        <div className="bg-gradient-to-r from-[#101936] via-[#1769FF] to-[#38BDF8] rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+        <div className="bg-gradient-to-r from-[#101936] via-[#E53935] to-[#FF5252] rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
           <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-bold uppercase tracking-wider border border-white/20">
               <Compass className="w-3.5 h-3.5" />
@@ -82,7 +82,7 @@ export default function About() {
             <p className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug tracking-tight">
               &ldquo;Our mission is to make urban transportation smarter, safer and more accessible.&rdquo;
             </p>
-            <p className="text-blue-100 text-sm sm:text-base font-medium pt-2">
+            <p className="text-rose-100 text-sm sm:text-base font-medium pt-2">
               Building fair wages, predictable journeys, and zero hassle mobility for all of India.
             </p>
           </div>

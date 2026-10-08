@@ -30,20 +30,20 @@ export default function Captain() {
   return (
     <section id="captain" className="bg-[#101936] text-white py-24 relative overflow-hidden">
       {/* Background Ambient Radial Glows */}
-      <div className="absolute top-1/4 -right-24 w-96 h-96 bg-[#1769FF]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#38BDF8]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -right-24 w-96 h-96 bg-[#E53935]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FF5252]/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* ================= LEFT: Headline, Benefits & CTA ================= */}
           <div className="lg:col-span-6 flex flex-col items-start space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-blue-200 border border-white/10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-rose-200 border border-white/10">
               <span>💰 Captain Partner Program</span>
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
               <span>Drive & Earn</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] to-[#1769FF]">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FF5252] to-[#E53935]">
                 On Your Schedule
               </span>
             </h2>
@@ -56,7 +56,7 @@ export default function Captain() {
             <div className="space-y-3.5 w-full pt-2">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#1769FF]/30 text-[#38BDF8] flex items-center justify-center shrink-0 border border-[#38BDF8]/30">
+                  <div className="w-6 h-6 rounded-full bg-[#E53935]/30 text-[#FF5252] flex items-center justify-center shrink-0 border border-[#FF5252]/30">
                     <Check className="w-3.5 h-3.5 stroke-[2.8]" />
                   </div>
                   <span className="text-gray-200 font-semibold text-sm sm:text-base">
@@ -71,7 +71,7 @@ export default function Captain() {
               <button
                 type="button"
                 onClick={handleApply}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#1769FF] hover:bg-[#1255D4] text-white font-bold text-base rounded-full px-8 py-4 shadow-xl shadow-[#1769FF]/35 hover:shadow-2xl transition-all cursor-pointer group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#E53935] hover:bg-[#C62828] text-white font-bold text-base rounded-full px-8 py-4 shadow-xl shadow-[#E53935]/35 hover:shadow-2xl transition-all cursor-pointer group"
               >
                 {applied ? (
                   <>
@@ -91,13 +91,13 @@ export default function Captain() {
           {/* ================= RIGHT: Captain Dashboard Mockup ================= */}
           <div className="lg:col-span-6 relative">
             {/* Glow backdrop behind card */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-[#1769FF]/30 via-[#38BDF8]/20 to-blue-600/30 rounded-3xl blur-2xl opacity-75 -z-10" />
+            <div className="absolute -inset-2 bg-gradient-to-r from-[#E53935]/30 via-[#FF5252]/20 to-red-600/30 rounded-3xl blur-2xl opacity-75 -z-10" />
 
             <div className="relative bg-[#162044]/95 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl">
               {/* Mockup Header */}
               <div className="flex items-center justify-between pb-5 border-b border-white/10">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#1769FF] to-[#38BDF8] flex items-center justify-center text-white font-black text-sm shadow-md">
+                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center text-white font-black text-sm shadow-md">
                     AV
                   </div>
                   <div>
@@ -139,7 +139,7 @@ export default function Captain() {
 
                 <div className="bg-[#101936]/60 p-3 rounded-2xl border border-white/5">
                   <span className="text-[10px] text-gray-400 uppercase font-bold block mb-1">Online Hours</span>
-                  <div className="text-2xl font-black text-[#38BDF8]">8h 24m</div>
+                  <div className="text-2xl font-black text-[#FF5252]">8h 24m</div>
                   <span className="text-[10px] text-gray-400">Active shift</span>
                 </div>
               </div>
@@ -168,12 +168,12 @@ export default function Captain() {
                             style={{ height: bar.height }}
                             className={`w-full max-w-[28px] rounded-t-lg transition-all duration-300 ${
                               bar.active
-                                ? 'bg-gradient-to-t from-[#1769FF] to-[#38BDF8] shadow-lg shadow-[#1769FF]/50'
+                                ? 'bg-gradient-to-t from-[#E53935] to-[#FF5252] shadow-lg shadow-[#E53935]/50'
                                 : 'bg-white/20 group-hover:bg-white/35'
                             }`}
                           />
                         </div>
-                        <span className={`text-[11px] font-semibold ${bar.active ? 'text-[#38BDF8] font-bold' : 'text-gray-400'}`}>
+                        <span className={`text-[11px] font-semibold ${bar.active ? 'text-[#FF5252] font-bold' : 'text-gray-400'}`}>
                           {bar.day}
                         </span>
                       </div>
@@ -185,7 +185,7 @@ export default function Captain() {
               {/* Bottom Support Badge */}
               <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-300">
                 <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  <Clock className="w-3.5 h-3.5 text-[#FF5252]" />
                   <span>Instant UPI withdrawal available 24/7</span>
                 </div>
                 <div className="flex items-center gap-1 text-emerald-400 font-semibold">

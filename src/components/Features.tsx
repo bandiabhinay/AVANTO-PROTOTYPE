@@ -27,9 +27,9 @@ const features: FeatureItem[] = [
     title: 'Safe & Secure',
     subtitle: '🛡 Total Protection',
     description: 'Verified captains, continuous live tracking, and instant SOS emergency assistance.',
-    accentColor: 'group-hover:border-[#1769FF]',
-    iconBg: 'bg-[#1769FF]/10',
-    iconColor: 'text-[#1769FF]',
+    accentColor: 'group-hover:border-[#E53935]',
+    iconBg: 'bg-[#E53935]/10',
+    iconColor: 'text-[#E53935]',
   },
   {
     icon: Wallet,
@@ -75,7 +75,7 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#1769FF] bg-[#1769FF]/10 mb-3 border border-[#1769FF]/20">
+          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E53935] bg-[#E53935]/10 mb-3 border border-[#E53935]/20">
             Avanto Advantage
           </span>
           <h2 className="text-4xl sm:text-5xl font-black text-[#101936] tracking-tight">
@@ -112,7 +112,7 @@ export default function Features() {
                 <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
                   {feature.subtitle}
                 </div>
-                <h3 className="text-2xl font-black text-[#101936] mb-3 group-hover:text-[#1769FF] transition-colors">
+                <h3 className="text-2xl font-black text-[#101936] mb-3 group-hover:text-[#E53935] transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mt-auto">

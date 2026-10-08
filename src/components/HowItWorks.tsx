@@ -97,11 +97,11 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ className = '', id = 'how-it-wo
                 <motion.div
                   variants={cardVariants}
                   whileHover={{ y: -6, transition: { duration: 0.25 } }}
-                  className="group bg-[#F5F7FC] rounded-2xl p-8 h-full flex flex-col border border-transparent hover:border-[#1769FF]/20 hover:shadow-lg transition-all duration-300"
+                  className="group bg-[#F5F7FC] rounded-2xl p-8 h-full flex flex-col border border-transparent hover:border-[#E53935]/20 hover:shadow-lg transition-all duration-300"
                 >
                   {/* Top Bar with Step Number Badge */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold bg-[#1769FF]/10 text-[#1769FF] border border-[#1769FF]/20">
+                    <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-semibold bg-[#E53935]/10 text-[#E53935] border border-[#E53935]/20">
                       {step.badge}
                     </span>
                     <span className="text-xs font-bold text-gray-400">
@@ -110,12 +110,12 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ className = '', id = 'how-it-wo
                   </div>
 
                   {/* Large Icon in Circle */}
-                  <div className="w-16 h-16 rounded-full bg-[#1769FF]/10 text-[#1769FF] flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <div className="w-16 h-16 rounded-full bg-[#E53935]/10 text-[#E53935] flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
                     <Icon className="w-8 h-8" strokeWidth={2.2} />
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-bold text-[#111936] mb-3 group-hover:text-[#1769FF] transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-[#111936] mb-3 group-hover:text-[#E53935] transition-colors duration-200">
                     {step.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mt-auto">
@@ -129,8 +129,8 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ className = '', id = 'how-it-wo
                     className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 z-20 items-center justify-center pointer-events-none"
                     aria-hidden="true"
                   >
-                    <div className="w-5 border-t-2 border-dashed border-[#1769FF]/40" />
-                    <ArrowRight className="w-5 h-5 text-[#1769FF] -ml-1 stroke-[2.5]" />
+                    <div className="w-5 border-t-2 border-dashed border-[#E53935]/40" />
+                    <ArrowRight className="w-5 h-5 text-[#E53935] -ml-1 stroke-[2.5]" />
                   </div>
                 )}
               </div>

@@ -35,19 +35,19 @@ export default function AppPromotion() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="bg-gradient-to-br from-[#101936] via-[#14234c] to-[#0c142b] rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-2xl relative overflow-hidden">
           {/* Background Ambient Circles */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#1769FF]/20 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#38BDF8]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#E53935]/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-[#FF5252]/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-[#38BDF8] border border-white/10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-rose-200 border border-white/10">
                 <span>📱 Mobile Experience</span>
               </div>
 
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
                 <span>Your Ride.</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] via-blue-400 to-[#1769FF]">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FF5252] via-rose-300 to-[#E53935]">
                   One Tap Away.
                 </span>
               </h2>
@@ -67,7 +67,7 @@ export default function AppPromotion() {
                   { icon: CheckCircle2, label: '24/7 Support' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-xs font-semibold text-gray-200">
-                    <item.icon className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                    <item.icon className="w-4 h-4 text-[#FF5252] shrink-0" />
                     <span className="truncate">{item.label}</span>
                   </div>
                 ))}
@@ -92,7 +92,7 @@ export default function AppPromotion() {
                   onClick={() => triggerDownload('Google Play')}
                   className="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-6 py-3.5 rounded-2xl backdrop-blur-md transition-all cursor-pointer group"
                 >
-                  <GooglePlayIcon className="w-6 h-6 text-[#38BDF8] group-hover:scale-110 transition-transform" />
+                  <GooglePlayIcon className="w-6 h-6 text-[#FF5252] group-hover:scale-110 transition-transform" />
                   <div className="text-left">
                     <div className="text-[10px] uppercase font-bold text-gray-300 leading-tight">Get it on</div>
                     <div className="text-sm font-extrabold leading-tight">Google Play</div>
@@ -125,7 +125,7 @@ export default function AppPromotion() {
                   {/* App Screen Top Bar */}
                   <div className="flex items-center justify-between pt-1">
                     <div className="flex items-center gap-1.5">
-                      <div className="w-6 h-6 rounded-lg bg-[#1769FF] flex items-center justify-center text-white text-[11px] font-black">
+                      <div className="w-6 h-6 rounded-lg bg-[#E53935] flex items-center justify-center text-white text-[11px] font-black">
                         A
                       </div>
                       <span className="font-black text-xs tracking-tight text-[#101936]">AVANTO</span>
@@ -136,16 +136,16 @@ export default function AppPromotion() {
                   </div>
 
                   {/* App Promo Banner */}
-                  <div className="bg-gradient-to-r from-[#1769FF] to-[#38BDF8] rounded-2xl p-3.5 text-white shadow-md">
-                    <span className="text-[9px] uppercase font-bold tracking-wider text-blue-100">Special Offer</span>
+                  <div className="bg-gradient-to-r from-[#E53935] to-[#FF5252] rounded-2xl p-3.5 text-white shadow-md">
+                    <span className="text-[9px] uppercase font-bold tracking-wider text-rose-100">Special Offer</span>
                     <h5 className="font-extrabold text-sm leading-tight mt-0.5">₹50 OFF on first 3 rides</h5>
-                    <p className="text-[10px] text-blue-100 mt-1">Use code: AVANTOFIRST</p>
+                    <p className="text-[10px] text-rose-100 mt-1">Use code: AVANTOFIRST</p>
                   </div>
 
                   {/* App Quick Action Tiles */}
                   <div className="grid grid-cols-2 gap-2 text-left">
                     <div className="bg-white p-3 rounded-xl border border-gray-100 shadow-sm">
-                      <Car className="w-4 h-4 text-[#1769FF] mb-1" />
+                      <Car className="w-4 h-4 text-[#E53935] mb-1" />
                       <span className="font-bold text-xs block">Book Ride</span>
                       <span className="text-[9px] text-gray-400">Under 3 min</span>
                     </div>
@@ -168,7 +168,7 @@ export default function AppPromotion() {
 
                   {/* Simulated Book Button inside App */}
                   <div className="pt-1">
-                    <div className="w-full py-2.5 rounded-xl bg-[#1769FF] text-white text-xs font-bold text-center shadow-md shadow-[#1769FF]/30">
+                    <div className="w-full py-2.5 rounded-xl bg-[#E53935] text-white text-xs font-bold text-center shadow-md shadow-[#E53935]/30">
                       Tap to Book Now
                     </div>
                   </div>

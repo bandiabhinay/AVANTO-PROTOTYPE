@@ -42,10 +42,10 @@ const rideTiers: RideTier[] = [
     id: 'mini',
     name: 'AVANTO MINI',
     tag: 'Most Popular',
-    tagClasses: 'bg-blue-50 text-[#1769FF] border-blue-200',
-    accentColor: 'from-[#1769FF] to-blue-600',
-    borderColor: 'hover:border-[#1769FF]',
-    iconBg: 'bg-blue-50 text-[#1769FF]',
+    tagClasses: 'bg-red-50 text-[#E53935] border-red-200',
+    accentColor: 'from-[#E53935] to-[#C62828]',
+    borderColor: 'hover:border-[#E53935]',
+    iconBg: 'bg-red-50 text-[#E53935]',
     icon: Car,
     description: 'Compact cars for quick trips and daily office commutes',
     price: '₹79',
@@ -57,10 +57,10 @@ const rideTiers: RideTier[] = [
     id: 'sedan',
     name: 'AVANTO SEDAN',
     tag: 'High Comfort',
-    tagClasses: 'bg-indigo-50 text-indigo-700 border-indigo-200',
-    accentColor: 'from-indigo-600 to-purple-600',
-    borderColor: 'hover:border-indigo-400',
-    iconBg: 'bg-indigo-50 text-indigo-600',
+    tagClasses: 'bg-rose-50 text-rose-700 border-rose-200',
+    accentColor: 'from-rose-600 to-red-700',
+    borderColor: 'hover:border-rose-400',
+    iconBg: 'bg-rose-50 text-rose-600',
     icon: Car,
     description: 'Comfortable sedan rides with extra legroom & boot space',
     price: '₹129',
@@ -92,7 +92,7 @@ export default function RideTypes({ onSelectRide }: RideTypesProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#1769FF] bg-[#1769FF]/10 mb-3 border border-[#1769FF]/20">
+          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E53935] bg-[#E53935]/10 mb-3 border border-[#E53935]/20">
             Ride Categories
           </span>
           <h2 className="text-4xl sm:text-5xl font-black text-[#101936] tracking-tight">
@@ -136,7 +136,7 @@ export default function RideTypes({ onSelectRide }: RideTypesProps) {
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-black text-[#101936] mb-1.5 group-hover:text-[#1769FF] transition-colors">
+                  <h3 className="text-xl font-black text-[#101936] mb-1.5 group-hover:text-[#E53935] transition-colors">
                     {tier.name}
                   </h3>
                   <p className="text-xs text-gray-500 leading-relaxed min-h-[36px] mb-4">
@@ -147,7 +147,7 @@ export default function RideTypes({ onSelectRide }: RideTypesProps) {
                   <div className="space-y-2 py-3 border-t border-gray-100 mb-5">
                     {tier.features.map((feat, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-gray-600">
-                        <Check className="w-3.5 h-3.5 text-[#1769FF] shrink-0" />
+                        <Check className="w-3.5 h-3.5 text-[#E53935] shrink-0" />
                         <span className="truncate">{feat}</span>
                       </div>
                     ))}
@@ -162,7 +162,7 @@ export default function RideTypes({ onSelectRide }: RideTypesProps) {
                       <span className="text-3xl font-black text-[#101936]">{tier.price}</span>
                     </div>
                     <div className="flex items-center gap-1 text-xs font-semibold text-gray-500">
-                      <Clock className="w-3.5 h-3.5 text-[#1769FF]" />
+                      <Clock className="w-3.5 h-3.5 text-[#E53935]" />
                       <span>{tier.eta}</span>
                     </div>
                   </div>
@@ -170,7 +170,7 @@ export default function RideTypes({ onSelectRide }: RideTypesProps) {
                   <button
                     type="button"
                     onClick={() => onSelectRide(tier.id)}
-                    className="w-full py-3.5 px-4 rounded-xl font-bold text-sm bg-[#101936] hover:bg-[#1769FF] text-white transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-sm group-hover:shadow-md"
+                    className="w-full py-3.5 px-4 rounded-xl font-bold text-sm bg-[#101936] hover:bg-[#E53935] text-white transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-sm group-hover:shadow-md"
                   >
                     <span>Book Now</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

@@ -76,7 +76,7 @@ export default function Footer() {
           {/* Brand Info Column */}
           <div className="lg:col-span-2 space-y-4">
             <a href="#home" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#1769FF] to-[#38BDF8] flex items-center justify-center shadow-md">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center shadow-md">
                 <Navigation className="w-5 h-5 text-white" />
               </div>
               <span className="text-2xl font-black tracking-tight text-white">AVANTO</span>
@@ -97,7 +97,7 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#1769FF] flex items-center justify-center transition-colors text-gray-300 hover:text-white border border-white/5"
+                    className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#E53935] flex items-center justify-center transition-colors text-gray-300 hover:text-white border border-white/5"
                   >
                     <Icon className="w-4 h-4" />
                   </a>
@@ -123,7 +123,7 @@ export default function Footer() {
                           handleScroll(link.href)
                         }
                       }}
-                      className="text-xs text-gray-400 hover:text-[#38BDF8] transition-colors font-medium"
+                      className="text-xs text-gray-400 hover:text-[#FF5252] transition-colors font-medium"
                     >
                       {link.label}
                     </a>
@@ -146,7 +146,7 @@ export default function Footer() {
             <a href="#" className="hover:text-gray-300 transition-colors">
               Terms &amp; Conditions
             </a>
-            <a href="#home" className="hover:text-[#38BDF8] transition-colors">
+            <a href="#home" className="hover:text-[#FF5252] transition-colors">
               Back to Top ↑
             </a>
           </div>

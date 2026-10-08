@@ -11,8 +11,8 @@ export default function FinalCTA({ onBookRide, onBecomeCaptain }: FinalCTAProps)
     <section className="bg-[#101936] text-white py-24 relative overflow-hidden">
       {/* Background radial blurs & glowing grid */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-32 left-1/3 w-96 h-96 bg-[#1769FF]/25 rounded-full blur-3xl" />
-        <div className="absolute -bottom-32 right-1/4 w-96 h-96 bg-[#38BDF8]/20 rounded-full blur-3xl" />
+        <div className="absolute -top-32 left-1/3 w-96 h-96 bg-[#E53935]/25 rounded-full blur-3xl" />
+        <div className="absolute -bottom-32 right-1/4 w-96 h-96 bg-[#FF5252]/20 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
@@ -21,14 +21,14 @@ export default function FinalCTA({ onBookRide, onBecomeCaptain }: FinalCTAProps)
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#1769FF] to-[#38BDF8] flex items-center justify-center mx-auto shadow-xl shadow-[#1769FF]/40 border border-white/20"
+          className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center mx-auto shadow-xl shadow-[#E53935]/40 border border-white/20"
         >
           <Navigation className="w-8 h-8 text-white" />
         </motion.div>
 
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
           <span>Ready to Move </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] via-blue-300 to-[#1769FF]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5252] via-rose-300 to-[#E53935]">
             Smarter?
           </span>
         </h2>
@@ -41,7 +41,7 @@ export default function FinalCTA({ onBookRide, onBecomeCaptain }: FinalCTAProps)
           <button
             type="button"
             onClick={onBookRide}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#1769FF] hover:bg-[#1255D4] text-white font-extrabold text-lg rounded-full px-9 py-4 shadow-xl shadow-[#1769FF]/40 hover:shadow-2xl hover:-translate-y-0.5 transition-all cursor-pointer group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#E53935] hover:bg-[#C62828] text-white font-extrabold text-lg rounded-full px-9 py-4 shadow-xl shadow-[#E53935]/40 hover:shadow-2xl hover:-translate-y-0.5 transition-all cursor-pointer group"
           >
             <span>Book a Ride</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

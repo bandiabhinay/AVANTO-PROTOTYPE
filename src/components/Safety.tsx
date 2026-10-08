@@ -14,8 +14,8 @@ const safetyFeatures = [
     icon: ShieldCheck,
     title: 'Verified Captains',
     description: 'Multi-layer criminal background checks, license verification, and vehicle fitness audits.',
-    color: 'text-[#1769FF]',
-    bg: 'bg-[#1769FF]/10',
+    color: 'text-[#E53935]',
+    bg: 'bg-[#E53935]/10',
   },
   {
     icon: Eye,
@@ -79,23 +79,23 @@ export default function Safety() {
               <motion.div
                 animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.4, 0.15] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute inset-0 rounded-full border-2 border-dashed border-[#1769FF]/30"
+                className="absolute inset-0 rounded-full border-2 border-dashed border-[#E53935]/30"
               />
 
               {/* Middle pulsing ring */}
               <motion.div
                 animate={{ scale: [1, 1.08, 1], opacity: [0.25, 0.55, 0.25] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-                className="absolute inset-8 rounded-full border-2 border-[#1769FF]/40 bg-[#1769FF]/5"
+                className="absolute inset-8 rounded-full border-2 border-[#E53935]/40 bg-[#E53935]/5"
               />
 
               {/* Central Glowing Shield Badge */}
               <motion.div
                 whileHover={{ scale: 1.04 }}
-                className="relative z-10 w-36 h-36 rounded-3xl bg-gradient-to-tr from-[#101936] via-[#1769FF] to-[#38BDF8] text-white flex flex-col items-center justify-center shadow-2xl shadow-[#1769FF]/40 p-4 text-center border-2 border-white/20"
+                className="relative z-10 w-36 h-36 rounded-3xl bg-gradient-to-tr from-[#101936] via-[#E53935] to-[#FF5252] text-white flex flex-col items-center justify-center shadow-2xl shadow-[#E53935]/40 p-4 text-center border-2 border-white/20"
               >
                 <ShieldCheck className="w-14 h-14 stroke-[2] mb-1 text-white" />
-                <span className="text-xs font-extrabold tracking-wider uppercase text-blue-100">
+                <span className="text-xs font-extrabold tracking-wider uppercase text-rose-100">
                   100% Verified
                 </span>
               </motion.div>
@@ -133,7 +133,7 @@ export default function Safety() {
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${feat.bg} ${feat.color} mb-4 group-hover:scale-105 transition-transform`}>
                     <Icon className="w-6 h-6 stroke-[2.2]" />
                   </div>
-                  <h3 className="text-lg font-black text-[#101936] mb-2 group-hover:text-[#1769FF] transition-colors">
+                  <h3 className="text-lg font-black text-[#101936] mb-2 group-hover:text-[#E53935] transition-colors">
                     {feat.title}
                   </h3>
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-auto">
