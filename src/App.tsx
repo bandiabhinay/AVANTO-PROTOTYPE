@@ -12,31 +12,68 @@ import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
-import BookingModal from './components/BookingModal'
 import SlideSection from './components/SlideSection'
 import StartupAnimation from './components/StartupAnimation'
 
+// ============================================================================
+// CONFIGURE YOUR AVANTO APPLICATION LINKS HERE
+// When you have your live Play Store / App Store links or a Smart Link (e.g. from onelink.to),
+// simply paste them here and they will work seamlessly on GoDaddy or any host.
+// ============================================================================
+
+// 1. Customer / Rider App Links:
+const RIDER_SMART_LINK = '' // e.g. 'https://onelink.to/avanto-rider'
+const RIDER_PLAY_STORE_URL = 'https://play.google.com/store/apps'
+const RIDER_APP_STORE_URL = 'https://apps.apple.com'
+
+// 2. Captain / Driver Partner App Links:
+const CAPTAIN_SMART_LINK = '' // e.g. 'https://onelink.to/avanto-captain'
+const CAPTAIN_PLAY_STORE_URL = 'https://play.google.com/store/apps'
+const CAPTAIN_APP_STORE_URL = 'https://apps.apple.com'
+
+// Helper function to detect device and redirect to the appropriate store/app
+function redirectToApp(smartLink: string, playStoreUrl: string, appStoreUrl: string) {
+  if (smartLink && smartLink.trim() !== '') {
+    window.location.href = smartLink
+    return
+  }
+
+  const userAgent = navigator.userAgent || navigator.vendor || (window as unknown as { opera?: string }).opera || ''
+
+  if (/android/i.test(userAgent)) {
+    window.location.href = playStoreUrl
+    return
+  }
+
+  if (/iPad|iPhone|iPod/.test(userAgent) && !(window as unknown as { MSStream?: unknown }).MSStream) {
+    window.location.href = appStoreUrl
+    return
+  }
+
+  // Desktop fallback: scroll smoothly to the mobile app download showcase
+  const downloadSection = document.getElementById('download')
+  if (downloadSection) {
+    downloadSection.scrollIntoView({ behavior: 'smooth' })
+  } else {
+    window.location.href = playStoreUrl
+  }
+}
+
 export default function App() {
   const [isStartupDone, setIsStartupDone] = useState(false)
-  const [isBookingOpen, setIsBookingOpen] = useState(false)
-  const [selectedRideType, setSelectedRideType] = useState('go')
 
   const handleStartupComplete = useCallback(() => {
     setIsStartupDone(true)
   }, [])
 
-  const handleOpenBooking = (rideType?: string) => {
-    if (rideType) {
-      setSelectedRideType(rideType)
-    }
-    setIsBookingOpen(true)
+  // Directly redirect customer to the Avanto Rider application
+  const handleOpenBooking = (_rideType?: string) => {
+    redirectToApp(RIDER_SMART_LINK, RIDER_PLAY_STORE_URL, RIDER_APP_STORE_URL)
   }
 
-  const handleScrollToCaptain = () => {
-    const el = document.getElementById('captain')
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
+  // Directly redirect driver to the Avanto Captain application
+  const handleBecomeCaptain = () => {
+    redirectToApp(CAPTAIN_SMART_LINK, CAPTAIN_PLAY_STORE_URL, CAPTAIN_APP_STORE_URL)
   }
 
   return (
@@ -56,7 +93,7 @@ export default function App() {
         <SlideSection index={0}>
           <Hero
             onBookRide={(tier) => handleOpenBooking(tier || 'go')}
-            onBecomeCaptain={handleScrollToCaptain}
+            onBecomeCaptain={handleBecomeCaptain}
           />
         </SlideSection>
 
@@ -77,7 +114,7 @@ export default function App() {
 
         {/* Section 5: Become a Captain (LEFT -> RIGHT) */}
         <SlideSection index={4}>
-          <Captain />
+          <Captain onBecomeCaptain={handleBecomeCaptain} />
         </SlideSection>
 
         {/* Section 6: Safety (RIGHT -> LEFT) */}
@@ -109,20 +146,13 @@ export default function App() {
         <SlideSection index={10}>
           <FinalCTA
             onBookRide={() => handleOpenBooking('go')}
-            onBecomeCaptain={handleScrollToCaptain}
+            onBecomeCaptain={handleBecomeCaptain}
           />
         </SlideSection>
       </main>
 
       {/* Comprehensive Footer */}
       <Footer />
-
-      {/* Interactive 6-Step Ride Booking Demo Modal */}
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-        initialRideType={selectedRideType}
-      />
     </div>
       )}
     </>

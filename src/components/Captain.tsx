@@ -19,10 +19,18 @@ const weeklyEarningsData = [
   { day: 'Sun', amount: '₹2,410', height: '58%' },
 ]
 
-export default function Captain() {
+export interface CaptainProps {
+  onBecomeCaptain?: () => void
+}
+
+export default function Captain({ onBecomeCaptain }: CaptainProps) {
   const [applied, setApplied] = useState(false)
 
   const handleApply = () => {
+    if (onBecomeCaptain) {
+      onBecomeCaptain()
+      return
+    }
     setApplied(true)
     setTimeout(() => setApplied(false), 3500)
   }
