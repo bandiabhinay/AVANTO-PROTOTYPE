@@ -75,9 +75,12 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center shadow-md shadow-[#E53935]/25 group-hover:scale-105 transition-transform duration-200">
               <Navigation className="w-5 h-5 text-white" />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-[#101936]">
+            <div className="flex flex-col text-left justify-center">
+              <span className="text-xl sm:text-2xl font-black tracking-tight leading-none text-[#E53935]">
                 AVANTO
+              </span>
+              <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#64748B] leading-tight mt-0.5 pl-0.5">
+                RIDE
               </span>
             </div>
           </a>

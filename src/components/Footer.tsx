@@ -79,7 +79,14 @@ export default function Footer() {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center shadow-md">
                 <Navigation className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-black tracking-tight text-white">AVANTO</span>
+              <div className="flex flex-col text-left justify-center">
+                <span className="text-xl sm:text-2xl font-black tracking-tight leading-none text-white">
+                  AVANTO
+                </span>
+                <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.25em] text-gray-400 leading-tight mt-0.5 pl-0.5">
+                  RIDE
+                </span>
+              </div>
             </a>
             <p className="text-gray-400 text-sm font-semibold tracking-wide">
               Smart Mobility. Simple Rides.

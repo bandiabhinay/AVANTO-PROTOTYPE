@@ -240,9 +240,14 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
                     <div className="w-7 h-7 rounded-lg bg-[#E53935] flex items-center justify-center text-white font-black text-xs shadow-sm">
                       A
                     </div>
-                    <span className="font-extrabold text-sm tracking-wide text-[#101936]">
-                      AVANTO RIDE
-                    </span>
+                    <div className="flex flex-col text-left justify-center">
+                      <span className="font-black text-sm tracking-tight leading-none text-[#E53935]">
+                        AVANTO
+                      </span>
+                      <span className="text-[8px] font-extrabold uppercase tracking-[0.25em] text-[#64748B] leading-none mt-0.5">
+                        RIDE
+                      </span>
+                    </div>
                   </div>
 
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-[11px] font-bold text-emerald-700 border border-emerald-100">

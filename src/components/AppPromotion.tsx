@@ -128,7 +128,10 @@ export default function AppPromotion() {
                       <div className="w-6 h-6 rounded-lg bg-[#E53935] flex items-center justify-center text-white text-[11px] font-black">
                         A
                       </div>
-                      <span className="font-black text-xs tracking-tight text-[#101936]">AVANTO</span>
+                      <div className="flex flex-col text-left justify-center">
+                        <span className="font-black text-xs tracking-tight leading-none text-[#E53935]">AVANTO</span>
+                        <span className="text-[7px] font-extrabold uppercase tracking-[0.22em] text-[#64748B] leading-none mt-0.5">RIDE</span>
+                      </div>
                     </div>
                     <span className="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">
                       50+ Cities

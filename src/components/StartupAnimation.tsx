@@ -335,10 +335,12 @@ export default function StartupAnimation({ onComplete }: StartupAnimationProps) 
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center shadow-xl shadow-[#E53935]/30">
             <Navigation className="w-8 h-8 text-white" />
           </div>
-          <span className="text-3xl font-black tracking-tight text-[#101936]">AVANTO</span>
-          <span className="text-xs uppercase tracking-widest text-[#E53935] font-bold">
-            Urban Mobility
-          </span>
+          <div className="flex flex-col items-center">
+            <span className="text-3xl font-black tracking-tight leading-none text-[#E53935]">AVANTO</span>
+            <span className="text-[11px] font-extrabold uppercase tracking-[0.3em] text-[#64748B] mt-1 pl-1">
+              RIDE
+            </span>
+          </div>
         </motion.div>
       </div>
     )
@@ -363,9 +365,14 @@ export default function StartupAnimation({ onComplete }: StartupAnimationProps) 
           <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center shadow-lg shadow-[#E53935]/25">
             <Navigation className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
-          <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#101936]">
-            AVANTO
-          </span>
+          <div className="flex flex-col text-left justify-center">
+            <span className="text-2xl sm:text-3xl font-black tracking-tight leading-none text-[#E53935]">
+              AVANTO
+            </span>
+            <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.28em] text-[#64748B] leading-tight mt-0.5 pl-0.5">
+              RIDE
+            </span>
+          </div>
         </motion.div>
 
         {/* Current vehicle indicator pill */}
