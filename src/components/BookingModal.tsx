@@ -88,7 +88,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={handleClose}
-          className="fixed inset-0 bg-[#101936]/70 backdrop-blur-sm"
+          className="fixed inset-0 bg-[#002B29]/80 backdrop-blur-sm"
         />
 
         {/* Modal Window */}
@@ -97,18 +97,18 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden z-10 border border-slate-100 my-8"
+          className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden z-10 border border-[#004D4A]/20 my-8"
         >
           {/* Header Bar */}
-          <div className="bg-[#101936] text-white px-6 py-4 flex items-center justify-between">
+          <div className="bg-[#003634] text-white px-6 py-4 flex items-center justify-between border-b border-[#004D4A]/50">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-[#E53935] flex items-center justify-center">
-                <Navigation className="w-4 h-4 text-white" />
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-[#004D4A] to-[#00766B] flex items-center justify-center border border-[#72DCDC]/30 shadow-sm">
+                <Navigation className="w-4 h-4 text-[#72DCDC]" />
               </div>
               <span className="font-bold tracking-tight text-base">AVANTO Booking Demo</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-xs px-2.5 py-1 rounded-full bg-white/10 text-rose-200 font-medium">
+              <span className="text-xs px-2.5 py-1 rounded-full bg-white/10 text-[#72DCDC] font-medium border border-white/10">
                 Step {step} of 6
               </span>
               <button
@@ -122,9 +122,9 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
           </div>
 
           {/* Progress bar */}
-          <div className="w-full bg-gray-100 h-1.5">
+          <div className="w-full bg-[#E0F7F6]/60 h-1.5">
             <motion.div
-              className="bg-[#E53935] h-full"
+              className="bg-gradient-to-r from-[#00766B] to-[#72DCDC] h-full"
               initial={{ width: `${((step - 1) / 5) * 100}%` }}
               animate={{ width: `${(step / 6) * 100}%` }}
               transition={{ duration: 0.3 }}
@@ -141,25 +141,25 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                 className="space-y-6"
               >
                 <div>
-                  <h3 className="text-2xl font-bold text-[#101936]">Where are you going?</h3>
-                  <p className="text-sm text-gray-500 mt-1">
+                  <h3 className="text-2xl font-bold text-[#003634]">Where are you going?</h3>
+                  <p className="text-sm text-[#4A6361] mt-1">
                     Select your pickup location and destination.
                   </p>
                 </div>
 
-                <div className="bg-[#F5F7FC] rounded-2xl p-4 border border-slate-200/80 space-y-4">
+                <div className="bg-[#F4FAF9] rounded-2xl p-4 border border-[#00766B]/15 space-y-4">
                   {/* Pickup */}
                   <div>
-                    <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider block mb-1">
+                    <label className="text-xs font-semibold text-[#4A6361] uppercase tracking-wider block mb-1">
                       Pickup Location
                     </label>
-                    <div className="flex items-center gap-3 bg-white px-3.5 py-2.5 rounded-xl border border-gray-200 focus-within:border-[#E53935] focus-within:ring-2 focus-within:ring-[#E53935]/20">
+                    <div className="flex items-center gap-3 bg-white px-3.5 py-2.5 rounded-xl border border-gray-200 focus-within:border-[#00766B] focus-within:ring-2 focus-within:ring-[#00766B]/20">
                       <div className="w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-emerald-100 shrink-0" />
                       <input
                         type="text"
                         value={pickup}
                         onChange={(e) => setPickup(e.target.value)}
-                        className="w-full text-sm font-semibold text-[#101936] outline-none"
+                        className="w-full text-sm font-semibold text-[#003634] outline-none"
                         placeholder="Enter pickup point"
                       />
                     </div>
@@ -167,16 +167,16 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
 
                   {/* Destination */}
                   <div>
-                    <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider block mb-1">
+                    <label className="text-xs font-semibold text-[#4A6361] uppercase tracking-wider block mb-1">
                       Destination
                     </label>
-                    <div className="flex items-center gap-3 bg-white px-3.5 py-2.5 rounded-xl border border-gray-200 focus-within:border-[#E53935] focus-within:ring-2 focus-within:ring-[#E53935]/20">
-                      <div className="w-3 h-3 rounded-full bg-[#E53935] ring-4 ring-[#E53935]/20 shrink-0" />
+                    <div className="flex items-center gap-3 bg-white px-3.5 py-2.5 rounded-xl border border-gray-200 focus-within:border-[#00766B] focus-within:ring-2 focus-within:ring-[#00766B]/20">
+                      <div className="w-3 h-3 rounded-full bg-[#00766B] ring-4 ring-[#00766B]/20 shrink-0" />
                       <input
                         type="text"
                         value={destination}
                         onChange={(e) => setDestination(e.target.value)}
-                        className="w-full text-sm font-semibold text-[#101936] outline-none"
+                        className="w-full text-sm font-semibold text-[#003634] outline-none"
                         placeholder="Enter destination"
                       />
                     </div>
@@ -185,7 +185,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
 
                 {/* Quick destination chips */}
                 <div className="flex flex-wrap gap-2 text-xs">
-                  <span className="text-gray-400 py-1 font-medium">Quick Pick:</span>
+                  <span className="text-[#4A6361] py-1 font-medium">Quick Pick:</span>
                   {[
                     'International Airport, T2',
                     'Indiranagar 100ft Rd',
@@ -195,7 +195,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                       key={preset}
                       type="button"
                       onClick={() => setDestination(preset)}
-                      className="px-2.5 py-1 rounded-full bg-red-50 text-[#E53935] hover:bg-red-100 font-medium transition-colors"
+                      className="px-2.5 py-1 rounded-full bg-[#E0F7F6] text-[#00766B] hover:bg-[#DEF7F3] font-medium transition-colors"
                     >
                       {preset}
                     </button>
@@ -205,7 +205,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                 <button
                   type="button"
                   onClick={() => setStep(2)}
-                  className="w-full py-4 rounded-xl bg-[#E53935] hover:bg-[#C62828] text-white font-bold text-base flex items-center justify-center gap-2 shadow-lg shadow-[#E53935]/30 transition-all cursor-pointer"
+                  className="w-full py-4 rounded-xl bg-[#00766B] hover:bg-[#008779] text-white font-bold text-base flex items-center justify-center gap-2 shadow-lg shadow-[#00766B]/30 transition-all cursor-pointer"
                 >
                   <span>Continue</span>
                   <ArrowRight className="w-5 h-5" />
@@ -222,8 +222,8 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                 className="space-y-6"
               >
                 <div>
-                  <h3 className="text-2xl font-bold text-[#101936]">Choose your ride</h3>
-                  <p className="text-sm text-gray-500 mt-1">
+                  <h3 className="text-2xl font-bold text-[#003634]">Choose your ride</h3>
+                  <p className="text-sm text-[#4A6361] mt-1">
                     Select the option that best fits your comfort and schedule.
                   </p>
                 </div>
@@ -238,7 +238,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                         onClick={() => setSelectedRideId(opt.id)}
                         className={`p-3.5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between ${
                           isSelected
-                            ? 'border-[#E53935] bg-red-50/60 shadow-sm'
+                            ? 'border-[#00766B] bg-[#E0F7F6]/40 shadow-sm'
                             : 'border-gray-200 hover:border-gray-300 bg-white'
                         }`}
                       >
@@ -246,27 +246,27 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                           <div
                             className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                               isSelected
-                                ? 'bg-[#E53935] text-white shadow-md shadow-[#E53935]/30'
-                                : 'bg-gray-100 text-[#101936]'
+                                ? 'bg-[#00766B] text-white shadow-md shadow-[#00766B]/30'
+                                : 'bg-[#F4FAF9] text-[#003634]'
                             }`}
                           >
                             <Icon className="w-6 h-6" />
                           </div>
                           <div>
                             <div className="flex items-center gap-2">
-                              <span className="font-bold text-[#101936] text-base">{opt.name}</span>
+                              <span className="font-bold text-[#003634] text-base">{opt.name}</span>
                               {opt.tag && (
-                                <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-[#E53935]/10 text-[#E53935]">
+                                <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-[#E0F7F6] text-[#00766B]">
                                   {opt.tag}
                                 </span>
                               )}
                             </div>
-                            <span className="text-xs text-gray-500">{opt.desc} • {opt.eta} away</span>
+                            <span className="text-xs text-[#4A6361]">{opt.desc} • {opt.eta} away</span>
                           </div>
                         </div>
 
                         <div className="text-right">
-                          <div className="text-lg font-black text-[#101936]">₹{opt.price}</div>
+                          <div className="text-lg font-black text-[#003634]">₹{opt.price}</div>
                           <span className="text-[11px] text-emerald-600 font-semibold">Guaranteed</span>
                         </div>
                       </div>
@@ -285,7 +285,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                   <button
                     type="button"
                     onClick={() => setStep(3)}
-                    className="w-2/3 py-3.5 rounded-xl bg-[#E53935] hover:bg-[#C62828] text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-[#E53935]/25 transition-all cursor-pointer"
+                    className="w-2/3 py-3.5 rounded-xl bg-[#00766B] hover:bg-[#008779] text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-[#00766B]/25 transition-all cursor-pointer"
                   >
                     <span>Review Ride</span>
                     <ArrowRight className="w-4 h-4" />
@@ -303,27 +303,27 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                 className="space-y-6"
               >
                 <div>
-                  <h3 className="text-2xl font-bold text-[#101936]">Confirm your ride</h3>
-                  <p className="text-sm text-gray-500 mt-1">
+                  <h3 className="text-2xl font-bold text-[#003634]">Confirm your ride</h3>
+                  <p className="text-sm text-[#4A6361] mt-1">
                     Please review your booking summary before requesting.
                   </p>
                 </div>
 
-                <div className="bg-[#F5F7FC] rounded-2xl p-5 border border-slate-200/80 space-y-4">
+                <div className="bg-[#F4FAF9] rounded-2xl p-5 border border-[#00766B]/15 space-y-4">
                   {/* Route Summary */}
                   <div className="space-y-3 pb-4 border-b border-gray-200">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <div>
                         <span className="text-[11px] font-semibold text-gray-400 uppercase">Pickup</span>
-                        <p className="text-sm font-semibold text-[#101936]">{pickup}</p>
+                        <p className="text-sm font-semibold text-[#003634]">{pickup}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <MapPin className="w-4 h-4 text-[#E53935] shrink-0 mt-0.5" />
+                      <MapPin className="w-4 h-4 text-[#00766B] shrink-0 mt-0.5" />
                       <div>
                         <span className="text-[11px] font-semibold text-gray-400 uppercase">Destination</span>
-                        <p className="text-sm font-semibold text-[#101936]">{destination}</p>
+                        <p className="text-sm font-semibold text-[#003634]">{destination}</p>
                       </div>
                     </div>
                   </div>
@@ -332,19 +332,19 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3 rounded-xl border border-gray-100">
                       <span className="text-[11px] text-gray-400 uppercase font-semibold">Ride Tier</span>
-                      <p className="font-bold text-[#101936]">{selectedRide.name}</p>
+                      <p className="font-bold text-[#003634]">{selectedRide.name}</p>
                     </div>
                     <div className="bg-white p-3 rounded-xl border border-gray-100">
                       <span className="text-[11px] text-gray-400 uppercase font-semibold">Estimated Fare</span>
-                      <p className="font-extrabold text-[#E53935] text-lg">₹{selectedRide.price}</p>
+                      <p className="font-extrabold text-[#00766B] text-lg">₹{selectedRide.price}</p>
                     </div>
                     <div className="bg-white p-3 rounded-xl border border-gray-100">
                       <span className="text-[11px] text-gray-400 uppercase font-semibold">Arrival Time</span>
-                      <p className="font-bold text-[#101936]">{selectedRide.eta} pickup</p>
+                      <p className="font-bold text-[#003634]">{selectedRide.eta} pickup</p>
                     </div>
                     <div className="bg-white p-3 rounded-xl border border-gray-100">
                       <span className="text-[11px] text-gray-400 uppercase font-semibold">Trip Distance</span>
-                      <p className="font-bold text-[#101936]">8.4 km (~24m)</p>
+                      <p className="font-bold text-[#003634]">8.4 km (~24m)</p>
                     </div>
                   </div>
                 </div>
@@ -360,7 +360,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                   <button
                     type="button"
                     onClick={handleConfirmRide}
-                    className="w-2/3 py-4 rounded-xl bg-[#E53935] hover:bg-[#C62828] text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-[#E53935]/30 transition-all cursor-pointer"
+                    className="w-2/3 py-4 rounded-xl bg-[#00766B] hover:bg-[#008779] text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-[#00766B]/30 transition-all cursor-pointer"
                   >
                     <span>Confirm Ride</span>
                     <ArrowRight className="w-5 h-5" />
@@ -384,26 +384,26 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                       <motion.div
                         animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0.7, 0.3] }}
                         transition={{ repeat: Infinity, duration: 1.5 }}
-                        className="absolute inset-0 rounded-full bg-[#E53935]/20"
+                        className="absolute inset-0 rounded-full bg-[#72DCDC]/20"
                       />
                       <motion.div
                         animate={{ scale: [1, 1.8, 1], opacity: [0.1, 0.4, 0.1] }}
                         transition={{ repeat: Infinity, duration: 2 }}
-                        className="absolute inset-0 rounded-full border-2 border-dashed border-[#E53935]/40"
+                        className="absolute inset-0 rounded-full border-2 border-dashed border-[#00766B]/40"
                       />
-                      <div className="w-16 h-16 rounded-full bg-[#E53935] text-white flex items-center justify-center shadow-xl shadow-[#E53935]/40 z-10">
+                      <div className="w-16 h-16 rounded-full bg-[#00766B] text-white flex items-center justify-center shadow-xl shadow-[#00766B]/40 z-10">
                         <Car className="w-8 h-8 animate-pulse" />
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="text-2xl font-bold text-[#101936]">Finding your Captain...</h3>
-                      <p className="text-sm text-gray-500 mt-2">
+                      <h3 className="text-2xl font-bold text-[#003634]">Finding your Captain...</h3>
+                      <p className="text-sm text-[#4A6361] mt-2">
                         Connecting to top-rated nearby captains in Tech Park area.
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-center gap-2 text-xs text-rose-600 font-semibold bg-rose-50 py-2 px-4 rounded-full max-w-xs mx-auto">
+                    <div className="flex items-center justify-center gap-2 text-xs text-[#00766B] font-semibold bg-[#E0F7F6] py-2 px-4 rounded-full max-w-xs mx-auto border border-[#00766B]/20">
                       <Clock className="w-3.5 h-3.5" />
                       <span>Average match time: ~5 seconds</span>
                     </div>
@@ -421,18 +421,18 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                     </div>
 
                     {/* Captain card */}
-                    <div className="bg-[#F5F7FC] rounded-2xl p-5 border border-slate-200/80 text-left">
+                    <div className="bg-[#F4FAF9] rounded-2xl p-5 border border-[#00766B]/15 text-left">
                       <div className="flex items-center justify-between pb-4 border-b border-gray-200">
                         <div className="flex items-center gap-3.5">
-                          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#E53935] to-rose-400 text-white flex items-center justify-center font-bold text-xl shadow-md">
+                          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#004D4A] to-[#00766B] text-white flex items-center justify-center font-bold text-xl shadow-md border border-[#72DCDC]/30">
                             RK
                           </div>
                           <div>
                             <div className="flex items-center gap-2">
-                              <h4 className="font-bold text-[#101936] text-lg">Rahul Kumar</h4>
-                              <ShieldCheck className="w-4 h-4 text-[#E53935]" />
+                              <h4 className="font-bold text-[#003634] text-lg">Rahul Kumar</h4>
+                              <ShieldCheck className="w-4 h-4 text-[#00766B]" />
                             </div>
-                            <div className="flex items-center gap-1.5 text-xs text-gray-500">
+                            <div className="flex items-center gap-1.5 text-xs text-[#4A6361]">
                               <span className="flex items-center text-amber-500 font-bold">
                                 <Star className="w-3.5 h-3.5 fill-amber-400 inline mr-0.5" />
                                 4.9
@@ -445,7 +445,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
 
                         <div className="text-right">
                           <span className="text-[11px] text-gray-400 font-semibold uppercase">ETA</span>
-                          <p className="text-xl font-extrabold text-[#E53935]">3 mins</p>
+                          <p className="text-xl font-extrabold text-[#00766B]">3 mins</p>
                         </div>
                       </div>
 
@@ -453,9 +453,9 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                       <div className="pt-4 flex items-center justify-between">
                         <div>
                           <span className="text-[11px] text-gray-400 font-semibold uppercase">Vehicle</span>
-                          <p className="font-bold text-[#101936] text-sm">{selectedRide.name} • White Swift</p>
+                          <p className="font-bold text-[#003634] text-sm">{selectedRide.name} • White Swift</p>
                         </div>
-                        <div className="bg-white px-3 py-1.5 rounded-lg border border-gray-200 text-sm font-mono font-bold text-[#101936]">
+                        <div className="bg-white px-3 py-1.5 rounded-lg border border-gray-200 text-sm font-mono font-bold text-[#003634]">
                           KA 01 AB 1234
                         </div>
                       </div>
@@ -464,7 +464,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                     <button
                       type="button"
                       onClick={() => setStep(5)}
-                      className="w-full py-4 rounded-xl bg-[#E53935] hover:bg-[#C62828] text-white font-bold text-base flex items-center justify-center gap-2 shadow-lg shadow-[#E53935]/30 transition-all cursor-pointer"
+                      className="w-full py-4 rounded-xl bg-[#00766B] hover:bg-[#008779] text-white font-bold text-base flex items-center justify-center gap-2 shadow-lg shadow-[#00766B]/30 transition-all cursor-pointer"
                     >
                       <span>Track Ride</span>
                       <ArrowRight className="w-5 h-5" />
@@ -484,8 +484,8 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-xl font-bold text-[#101936]">Captain is on the way</h3>
-                    <p className="text-xs text-gray-500">Arriving in approximately 2 min</p>
+                    <h3 className="text-xl font-bold text-[#003634]">Captain is on the way</h3>
+                    <p className="text-xs text-[#4A6361]">Arriving in approximately 2 min</p>
                   </div>
                   <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200 animate-pulse">
                     Live Tracking
@@ -493,7 +493,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                 </div>
 
                 {/* Animated Map Area */}
-                <div className="relative h-48 w-full bg-[#101936] rounded-2xl overflow-hidden shadow-inner border border-slate-800">
+                <div className="relative h-48 w-full bg-[#002B29] rounded-2xl overflow-hidden shadow-inner border border-[#004D4A]">
                   {/* Road Grid Vector */}
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 190">
                     <defs>
@@ -510,16 +510,16 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                     <path
                       d="M 50 140 C 120 140, 150 60, 240 60 C 300 60, 320 110, 360 110"
                       fill="none"
-                      stroke="#E53935"
+                      stroke="#00766B"
                       strokeWidth="6"
                       strokeLinecap="round"
-                      opacity="0.3"
+                      opacity="0.5"
                     />
                     {/* Active Route Core */}
                     <path
                       d="M 50 140 C 120 140, 150 60, 240 60 C 300 60, 320 110, 360 110"
                       fill="none"
-                      stroke="#FF5252"
+                      stroke="#72DCDC"
                       strokeWidth="3.5"
                       strokeLinecap="round"
                       strokeDasharray="6 4"
@@ -530,8 +530,8 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                     <circle cx="50" cy="140" r="12" stroke="#10B981" strokeWidth="2" opacity="0.4" />
 
                     {/* Destination Marker */}
-                    <circle cx="360" cy="110" r="6" fill="#EF4444" />
-                    <circle cx="360" cy="110" r="12" stroke="#EF4444" strokeWidth="2" opacity="0.4" />
+                    <circle cx="360" cy="110" r="6" fill="#72DCDC" />
+                    <circle cx="360" cy="110" r="12" stroke="#72DCDC" strokeWidth="2" opacity="0.4" />
                   </svg>
 
                   {/* Animated moving vehicle along the curve */}
@@ -547,7 +547,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                     }}
                     className="absolute top-0 left-0"
                   >
-                    <div className="w-8 h-8 rounded-full bg-[#E53935] text-white flex items-center justify-center shadow-lg shadow-[#E53935]/50 border-2 border-white ring-2 ring-[#FF5252]">
+                    <div className="w-8 h-8 rounded-full bg-[#00766B] text-white flex items-center justify-center shadow-lg shadow-[#00766B]/50 border-2 border-white ring-2 ring-[#72DCDC]">
                       <Car className="w-4 h-4" />
                     </div>
                   </motion.div>
@@ -562,10 +562,10 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                 </div>
 
                 {/* Status card */}
-                <div className="bg-[#F5F7FC] rounded-xl p-3.5 border border-slate-200/80 flex items-center justify-between text-xs">
+                <div className="bg-[#F4FAF9] rounded-xl p-3.5 border border-[#00766B]/15 flex items-center justify-between text-xs">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="font-semibold text-[#101936]">On schedule for airport drop-off</span>
+                    <span className="font-semibold text-[#003634]">On schedule for airport drop-off</span>
                   </div>
                   <span className="font-mono text-gray-500">OTP: 4821</span>
                 </div>
@@ -594,27 +594,27 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-black text-[#101936]">Ride Completed 🎉</h3>
-                  <p className="text-sm text-gray-500 mt-1">Thank you for riding with Avanto!</p>
+                  <h3 className="text-2xl font-black text-[#003634]">Ride Completed 🎉</h3>
+                  <p className="text-sm text-[#4A6361] mt-1">Thank you for riding with Avanto!</p>
                 </div>
 
                 {/* Receipt Card */}
-                <div className="bg-[#F5F7FC] rounded-2xl p-5 border border-slate-200/80 text-left space-y-3">
+                <div className="bg-[#F4FAF9] rounded-2xl p-5 border border-[#00766B]/15 text-left space-y-3">
                   <div className="flex justify-between items-baseline pb-3 border-b border-gray-200">
-                    <span className="text-sm text-gray-500 font-medium">Total Fare</span>
-                    <span className="text-2xl font-black text-[#101936]">₹{selectedRide.price}</span>
+                    <span className="text-sm text-[#4A6361] font-medium">Total Fare</span>
+                    <span className="text-2xl font-black text-[#003634]">₹{selectedRide.price}</span>
                   </div>
-                  <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
-                    <div>Distance: <span className="font-bold text-[#101936]">8.4 km</span></div>
-                    <div>Duration: <span className="font-bold text-[#101936]">24 min</span></div>
-                    <div>Captain: <span className="font-bold text-[#101936]">Rahul Kumar</span></div>
+                  <div className="grid grid-cols-2 gap-2 text-xs text-[#4A6361]">
+                    <div>Distance: <span className="font-bold text-[#003634]">8.4 km</span></div>
+                    <div>Duration: <span className="font-bold text-[#003634]">24 min</span></div>
+                    <div>Captain: <span className="font-bold text-[#003634]">Rahul Kumar</span></div>
                     <div>Payment: <span className="font-bold text-emerald-600">Paid via UPI</span></div>
                   </div>
                 </div>
 
                 {/* Star Rating */}
                 <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
-                  <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#4A6361] mb-2">
                     Rate Your Ride
                   </p>
                   <div className="flex items-center justify-center gap-2">
@@ -654,7 +654,7 @@ export default function BookingModal({ isOpen, onClose, initialRideType = 'go' }
                   <button
                     type="button"
                     onClick={handleClose}
-                    className="w-1/2 py-3.5 rounded-xl bg-[#E53935] hover:bg-[#C62828] text-white font-bold shadow-lg shadow-[#E53935]/30 transition-all cursor-pointer"
+                    className="w-1/2 py-3.5 rounded-xl bg-[#00766B] hover:bg-[#008779] text-white font-bold shadow-lg shadow-[#00766B]/30 transition-all cursor-pointer"
                   >
                     Done
                   </button>

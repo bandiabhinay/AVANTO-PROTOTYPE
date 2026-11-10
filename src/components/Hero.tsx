@@ -54,10 +54,10 @@ const rideOptions: RideOption[] = [
 ]
 
 const stats = [
-  { value: '10M+', label: 'Rides', icon: Car, color: 'text-[#E53935]', bg: 'bg-[#E53935]/10' },
-  { value: '50+', label: 'Cities', icon: MapPin, color: 'text-emerald-600', bg: 'bg-emerald-500/10' },
+  { value: '10M+', label: 'Rides', icon: Car, color: 'text-[#00766B]', bg: 'bg-[#00766B]/10' },
+  { value: '50+', label: 'Cities', icon: MapPin, color: 'text-[#008779]', bg: 'bg-[#72DCDC]/20' },
   { value: '4.9★', label: 'Average Rating', icon: Star, color: 'text-amber-500', bg: 'bg-amber-500/10' },
-  { value: '24/7', label: 'Support', icon: Headphones, color: 'text-rose-500', bg: 'bg-rose-500/10' },
+  { value: '24/7', label: 'Support', icon: Headphones, color: 'text-[#00766B]', bg: 'bg-[#E0F7F6]' },
 ]
 
 export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
@@ -66,19 +66,19 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[92vh] w-full bg-[#F5F7FC] flex flex-col justify-center overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-20"
+      className="relative min-h-[92vh] w-full bg-gradient-to-b from-[#F0FDFB] via-[#F4FAF9] to-white flex flex-col justify-center overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-20"
     >
-      {/* Background Decorative Ambient Blobs */}
+      {/* Background Decorative Ambient Blobs with App Teal & Cyan Tints */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-24 -right-24 w-96 h-96 sm:w-[520px] sm:h-[520px] rounded-full bg-[#E53935]/8 blur-3xl" />
-        <div className="absolute top-1/2 -left-28 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#FF5252]/10 blur-3xl" />
-        <div className="absolute -bottom-24 right-1/4 w-96 h-96 rounded-full bg-[#101936]/5 blur-3xl" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 sm:w-[520px] sm:h-[520px] rounded-full bg-[#00766B]/10 blur-3xl" />
+        <div className="absolute top-1/2 -left-28 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#72DCDC]/15 blur-3xl" />
+        <div className="absolute -bottom-24 right-1/4 w-96 h-96 rounded-full bg-[#004D4A]/8 blur-3xl" />
 
-        {/* Subtle grid pattern */}
+        {/* Subtle geometric dot grid pattern */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.035]"
           style={{
-            backgroundImage: `radial-gradient(#101936 1.5px, transparent 1.5px)`,
+            backgroundImage: `radial-gradient(#004D4A 1.5px, transparent 1.5px)`,
             backgroundSize: '28px 28px',
           }}
         />
@@ -95,22 +95,23 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
           >
             {/* Pill Badge */}
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-red-200/80 text-[#E53935] text-xs sm:text-sm font-bold tracking-wide shadow-sm">
-                <span>🚀 Now in 50+ cities</span>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#D1E7E5] text-[#00766B] text-xs sm:text-sm font-bold tracking-wide shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-[#72DCDC] animate-pulse" />
+                <span>Now in 50+ cities across India</span>
               </span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#101936] leading-[1.06]">
-              <span>Get There.</span>
-              <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-[#E53935] via-[#C62828] to-[#FF5252]">
-                Smarter & Faster.
+            {/* Main Headline (Aligning with new app slogan "Move with confidence.") */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#003634] leading-[1.06]">
+              <span>Move with</span>
+              <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-[#00766B] via-[#008779] to-[#72DCDC]">
+                Confidence.
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl font-normal">
-              Book rides in seconds. Safe, reliable and affordable transportation at your fingertips.
+            <p className="text-lg sm:text-xl text-[#4A6361] leading-relaxed max-w-xl font-normal">
+              Safe rides, reliable earnings, and transparent fares at your fingertips. Your ride, our priority.
             </p>
 
             {/* Primary & Secondary CTAs */}
@@ -118,7 +119,7 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
               <button
                 type="button"
                 onClick={() => onBookRide(selectedRide.id)}
-                className="inline-flex items-center justify-center gap-3 bg-[#E53935] hover:bg-[#C62828] text-white font-bold text-base sm:text-lg rounded-full px-8 py-4 shadow-xl shadow-[#E53935]/30 hover:shadow-2xl hover:shadow-[#E53935]/40 hover:-translate-y-0.5 transition-all cursor-pointer group"
+                className="inline-flex items-center justify-center gap-3 bg-[#00766B] hover:bg-[#004D4A] text-white font-bold text-base sm:text-lg rounded-full px-8 py-4 shadow-xl shadow-[#00766B]/30 hover:shadow-2xl hover:shadow-[#00766B]/40 hover:-translate-y-0.5 transition-all cursor-pointer group"
               >
                 <span>Book a Ride</span>
                 <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -127,7 +128,7 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
               <button
                 type="button"
                 onClick={onBecomeCaptain}
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#101936] text-[#101936] hover:bg-[#101936] hover:text-white font-bold text-base sm:text-lg rounded-full px-8 py-4 transition-all duration-200 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#004D4A] text-[#004D4A] hover:bg-[#004D4A] hover:text-white font-bold text-base sm:text-lg rounded-full px-8 py-4 transition-all duration-200 cursor-pointer"
               >
                 <span>Become a Captain</span>
               </button>
@@ -138,7 +139,7 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="pt-6 sm:pt-8 border-t border-slate-200"
+              className="pt-6 sm:pt-8 border-t border-[#D1E7E5]"
             >
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                 {stats.map((stat, i) => {
@@ -149,17 +150,17 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
                       initial={{ scale: 0.9, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ delay: 0.4 + i * 0.08 }}
-                      className="bg-white/80 backdrop-blur-sm p-3.5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"
+                      className="bg-white/90 backdrop-blur-sm p-3.5 rounded-2xl border border-[#D1E7E5]/70 shadow-sm hover:shadow-md transition-shadow"
                     >
                       <div className="flex items-center gap-2.5 mb-1.5">
                         <div className={`w-8 h-8 rounded-xl ${stat.bg} ${stat.color} flex items-center justify-center`}>
                           <Icon className="w-4 h-4" />
                         </div>
-                        <div className="text-xl sm:text-2xl font-black text-[#101936] tracking-tight">
+                        <div className="text-xl sm:text-2xl font-black text-[#003634] tracking-tight">
                           {stat.value}
                         </div>
                       </div>
-                      <div className="text-xs text-gray-500 font-semibold pl-1">
+                      <div className="text-xs text-[#4A6361] font-semibold pl-1">
                         {stat.label}
                       </div>
                     </motion.div>
@@ -178,7 +179,7 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
           >
             <div className="relative w-full max-w-[430px]">
               {/* Backlight Glow Behind Mockup */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#E53935]/20 via-[#FF5252]/15 to-[#101936]/10 rounded-3xl blur-2xl transform scale-95 -z-10" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#00766B]/20 via-[#72DCDC]/15 to-[#004D4A]/10 rounded-3xl blur-2xl transform scale-95 -z-10" />
 
               {/* FLOATING BADGE 1: ETA 3 min (Top-Left) */}
               <motion.div
@@ -233,25 +234,29 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
               </motion.div>
 
               {/* MAIN MOCKUP CARD */}
-              <div className="relative bg-white rounded-3xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(16,25,54,0.14)] border border-slate-100 z-10">
+              <div className="relative bg-white rounded-3xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(0,77,74,0.12)] border border-[#D1E7E5] z-10">
                 {/* Mockup Header: Brand & Status */}
                 <div className="flex items-center justify-between pb-3.5 border-b border-gray-100">
                   <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-[#E53935] flex items-center justify-center text-white font-black text-xs shadow-sm">
-                      A
+                    <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-[#004D4A] to-[#00766B] flex items-center justify-center text-white font-black text-xs shadow-sm">
+                      <svg viewBox="0 0 100 100" fill="none" className="w-4 h-4 text-white">
+                        <path d="M38 18 L18 82 L34 82 L54 18 Z" fill="currentColor" />
+                        <path d="M56 42 L82 42 L66 60 L50 60 Z" fill="currentColor" />
+                        <path d="M48 64 L74 64 L58 82 L42 82 Z" fill="currentColor" />
+                      </svg>
                     </div>
                     <div className="flex flex-col text-left justify-center">
-                      <span className="font-black text-sm tracking-tight leading-none text-[#E53935]">
+                      <span className="font-black text-sm tracking-tight leading-none text-[#004D4A]">
                         AVANTO
                       </span>
-                      <span className="text-[8px] font-extrabold uppercase tracking-[0.25em] text-[#64748B] leading-none mt-0.5">
-                        RIDE
+                      <span className="text-[8px] font-extrabold uppercase tracking-[0.25em] text-[#00766B] leading-none mt-0.5">
+                        R I D E
                       </span>
                     </div>
                   </div>
 
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-[11px] font-bold text-emerald-700 border border-emerald-100">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#E0F7F6] text-[11px] font-bold text-[#00766B] border border-[#72DCDC]/40">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#72DCDC] animate-pulse" />
                     <span>Live Fleet</span>
                   </div>
                 </div>
@@ -304,7 +309,7 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
                     <path
                       d="M 45 120 C 100 120, 130 50, 190 50 C 240 50, 270 95, 315 90"
                       fill="none"
-                      stroke="#E53935"
+                      stroke="#00766B"
                       strokeWidth="7"
                       strokeLinecap="round"
                       opacity="0.35"
@@ -314,19 +319,19 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
                     <path
                       d="M 45 120 C 100 120, 130 50, 190 50 C 240 50, 270 95, 315 90"
                       fill="none"
-                      stroke="#FF5252"
+                      stroke="#72DCDC"
                       strokeWidth="3.5"
                       strokeLinecap="round"
                       strokeDasharray="6 4"
                     />
 
                     {/* Pickup Marker */}
-                    <circle cx="45" cy="120" r="5" fill="#10B981" />
-                    <circle cx="45" cy="120" r="10" stroke="#10B981" strokeWidth="2" opacity="0.5" />
+                    <circle cx="45" cy="120" r="5" fill="#72DCDC" />
+                    <circle cx="45" cy="120" r="10" stroke="#72DCDC" strokeWidth="2" opacity="0.6" />
 
                     {/* Destination Marker */}
-                    <circle cx="315" cy="90" r="5" fill="#EF4444" />
-                    <circle cx="315" cy="90" r="10" stroke="#EF4444" strokeWidth="2" opacity="0.5" />
+                    <circle cx="315" cy="90" r="5" fill="#00766B" />
+                    <circle cx="315" cy="90" r="10" stroke="#00766B" strokeWidth="2" opacity="0.5" />
                   </svg>
 
                   {/* Real-time moving vehicle along route */}
@@ -342,19 +347,19 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
                     }}
                     className="absolute top-0 left-0"
                   >
-                    <div className="w-8 h-8 rounded-full bg-[#E53935] text-white flex items-center justify-center shadow-lg shadow-[#E53935]/50 border-2 border-white ring-2 ring-[#FF5252]">
+                    <div className="w-8 h-8 rounded-full bg-[#00766B] text-white flex items-center justify-center shadow-lg shadow-[#00766B]/50 border-2 border-white ring-2 ring-[#72DCDC]">
                       <Car className="w-4 h-4" />
                     </div>
                   </motion.div>
 
                   {/* Route Badge */}
-                  <div className="absolute top-2.5 left-2.5 bg-black/60 backdrop-blur-md text-white text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  <div className="absolute top-2.5 left-2.5 bg-[#004D4A]/80 backdrop-blur-md text-white text-[10px] font-medium px-2.5 py-1 rounded-full border border-[#72DCDC]/30 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#72DCDC]" />
                     <span>Fastest Route • 8.4 km</span>
                   </div>
 
                   {/* Captain Status */}
-                  <div className="absolute bottom-2.5 right-2.5 bg-black/60 backdrop-blur-sm text-gray-200 text-[10px] font-medium px-2 py-0.5 rounded-md border border-white/10">
+                  <div className="absolute bottom-2.5 right-2.5 bg-[#004D4A]/80 backdrop-blur-sm text-[#E0F7F6] text-[10px] font-medium px-2 py-0.5 rounded-md border border-[#72DCDC]/20">
                     Captain rating: 4.9★
                   </div>
                 </div>
@@ -372,21 +377,21 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
                         onClick={() => setSelectedRide(ride)}
                         className={`relative rounded-xl p-2.5 text-left transition-all cursor-pointer border ${
                           isSelected
-                            ? 'bg-[#E53935]/5 border-[#E53935] shadow-sm ring-1 ring-[#E53935]'
+                            ? 'bg-[#E0F7F6] border-[#00766B] shadow-sm ring-1 ring-[#00766B]'
                             : 'bg-white border-gray-100 hover:border-gray-200 hover:bg-gray-50'
                         }`}
                       >
                         {ride.tag && (
-                          <span className="absolute -top-2 right-2 text-[8px] font-bold bg-[#E53935] text-white px-1.5 py-0.2 rounded-full uppercase">
+                          <span className="absolute -top-2 right-2 text-[8px] font-bold bg-[#00766B] text-white px-1.5 py-0.2 rounded-full uppercase">
                             {ride.tag}
                           </span>
                         )}
                         <div className="flex items-center justify-between mb-1">
-                          <Icon className={`w-4 h-4 ${isSelected ? 'text-[#E53935]' : 'text-gray-400'}`} />
+                          <Icon className={`w-4 h-4 ${isSelected ? 'text-[#00766B]' : 'text-gray-400'}`} />
                           <span className="text-[10px] text-gray-400 font-medium">{ride.eta}</span>
                         </div>
-                        <div className="text-[11px] font-bold text-[#101936] truncate">{ride.name}</div>
-                        <div className="text-xs font-black text-[#E53935]">₹{ride.price}</div>
+                        <div className="text-[11px] font-bold text-[#004D4A] truncate">{ride.name}</div>
+                        <div className="text-xs font-black text-[#00766B]">₹{ride.price}</div>
                       </button>
                     )
                   })}
@@ -397,7 +402,7 @@ export default function Hero({ onBookRide, onBecomeCaptain }: HeroProps) {
                   <button
                     type="button"
                     onClick={() => onBookRide(selectedRide.id)}
-                    className="w-full py-3.5 rounded-xl bg-[#E53935] hover:bg-[#C62828] text-white font-bold text-sm shadow-lg shadow-[#E53935]/30 hover:shadow-xl hover:shadow-[#E53935]/40 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3.5 rounded-xl bg-[#00766B] hover:bg-[#004D4A] text-white font-bold text-sm shadow-lg shadow-[#00766B]/30 hover:shadow-xl hover:shadow-[#00766B]/40 transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span>Book Now</span>
                     <ArrowRight className="w-4 h-4" />

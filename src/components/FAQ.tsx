@@ -53,18 +53,18 @@ export default function FAQ() {
   }
 
   return (
-    <section className="bg-[#F5F7FC] py-24 relative overflow-hidden">
+    <section className="bg-[#F4FAF9] py-24 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E53935] bg-[#E53935]/10 mb-3 border border-[#E53935]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#00766B] bg-[#E0F7F6] mb-3 border border-[#00766B]/25">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#101936] tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-[#003634] tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="mt-3 text-lg text-gray-600">
+          <p className="mt-3 text-lg text-[#4A6361]">
             Everything you need to know about riding and earning with Avanto.
           </p>
         </div>
@@ -76,18 +76,18 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden transition-colors"
+                className="bg-white rounded-2xl border border-[#00766B]/15 shadow-sm overflow-hidden transition-colors"
               >
                 <button
                   type="button"
                   onClick={() => toggle(index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-[#101936] hover:text-[#E53935] transition-colors cursor-pointer"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-[#003634] hover:text-[#00766B] transition-colors cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'bg-[#E53935] text-white rotate-180' : 'bg-gray-100 text-gray-600'
+                      isOpen ? 'bg-[#00766B] text-white rotate-180' : 'bg-[#E0F7F6] text-[#00766B]'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />

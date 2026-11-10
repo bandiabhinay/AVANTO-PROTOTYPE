@@ -84,7 +84,7 @@ export default function App() {
       )}
 
       {isStartupDone && (
-        <div className="min-h-screen bg-[#F5F7FC] text-[#101936] antialiased selection:bg-[#E53935] selection:text-white overflow-x-hidden animate-fade-in">
+        <div className="min-h-screen bg-[#F4FAF9] text-[#0A2624] antialiased selection:bg-[#00766B] selection:text-white overflow-x-hidden animate-fade-in">
       {/* Sticky & Floating Glass Navigation */}
       <Navbar onOpenBooking={() => handleOpenBooking('go')} />
 

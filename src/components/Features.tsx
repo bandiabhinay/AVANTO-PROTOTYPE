@@ -27,9 +27,9 @@ const features: FeatureItem[] = [
     title: 'Safe & Secure',
     subtitle: '🛡 Total Protection',
     description: 'Verified captains, continuous live tracking, and instant SOS emergency assistance.',
-    accentColor: 'group-hover:border-[#E53935]',
-    iconBg: 'bg-[#E53935]/10',
-    iconColor: 'text-[#E53935]',
+    accentColor: 'group-hover:border-[#00766B]',
+    iconBg: 'bg-[#E0F7F6]',
+    iconColor: 'text-[#00766B]',
   },
   {
     icon: Wallet,
@@ -75,14 +75,14 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E53935] bg-[#E53935]/10 mb-3 border border-[#E53935]/20">
+          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#00766B] bg-[#E0F7F6] mb-3 border border-[#72DCDC]/40">
             Avanto Advantage
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#101936] tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-[#003634] tracking-tight">
             Why Choose Avanto
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
-            The smartest way to get around.
+          <p className="mt-4 text-lg text-[#4A6361]">
+            The smartest way to get around with peace of mind.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function Features() {
                 key={index}
                 whileHover={{ y: -6 }}
                 transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-                className={`group rounded-3xl p-8 border-2 border-slate-100 bg-[#F5F7FC]/70 hover:bg-white ${feature.accentColor} hover:shadow-xl transition-all duration-300 flex flex-col`}
+                className={`group rounded-3xl p-8 border border-[#D1E7E5] bg-[#F4FAF9]/80 hover:bg-white ${feature.accentColor} hover:shadow-xl transition-all duration-300 flex flex-col`}
               >
                 {/* Icon Container */}
                 <div className="flex items-center justify-between mb-6">
@@ -104,15 +104,15 @@ export default function Features() {
                   >
                     <Icon className="w-7 h-7" />
                   </div>
-                  <span className="text-xs font-bold text-gray-400 font-mono">
+                  <span className="text-xs font-bold text-[#4A6361] font-mono">
                     0{index + 1}
                   </span>
                 </div>
 
-                <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#4A6361] mb-1">
                   {feature.subtitle}
                 </div>
-                <h3 className="text-2xl font-black text-[#101936] mb-3 group-hover:text-[#E53935] transition-colors">
+                <h3 className="text-2xl font-black text-[#003634] mb-3 group-hover:text-[#00766B] transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mt-auto">

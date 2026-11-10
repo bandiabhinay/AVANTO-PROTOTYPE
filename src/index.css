@@ -1,34 +1,38 @@
 @import "tailwindcss";
 
 @theme {
-  /* Avanto Brand Colors - Red + White Theme */
-  --color-avanto-blue: #E53935;
-  --color-avanto-red: #E53935;
-  --color-avanto-navy: #101936;
-  --color-avanto-bg: #F5F7FC;
+  /* Avanto Brand Colors - New Deep Teal, Emerald & Cyan App Theme */
+  --color-avanto-primary: #004D4A;
+  --color-avanto-teal: #00766B;
+  --color-avanto-accent: #008779;
+  --color-avanto-cyan: #72DCDC;
+  --color-avanto-cyan-light: #E0F7F6;
+  --color-avanto-dark: #003634;
+  --color-avanto-navy: #0F172A;
+  --color-avanto-bg: #F4FAF9;
   --color-avanto-white: #FFFFFF;
-  --color-avanto-accent: #FF5252;
 
-  --color-primary: #E53935;
-  --color-primary-50: #FEF2F2;
-  --color-primary-100: #FEE2E2;
-  --color-primary-200: #FECACA;
-  --color-primary-300: #FCA5A5;
-  --color-primary-400: #F87171;
-  --color-primary-500: #E53935;
-  --color-primary-600: #C62828;
-  --color-primary-700: #B71C1C;
-  --color-primary-800: #8E1515;
-  --color-primary-900: #5F0E0E;
+  /* Primary Palette (00766B / 004D4A) */
+  --color-primary: #00766B;
+  --color-primary-50: #F0FDFB;
+  --color-primary-100: #CCFBF4;
+  --color-primary-200: #99F6E7;
+  --color-primary-300: #5EEAD4;
+  --color-primary-400: #2DD4BF;
+  --color-primary-500: #00766B;
+  --color-primary-600: #00665C;
+  --color-primary-700: #004D4A;
+  --color-primary-800: #003B38;
+  --color-primary-900: #002B29;
 
-  --color-dark: #101936;
-  --color-surface: #F5F7FC;
-  --color-text-primary: #101936;
-  --color-text-secondary: #64748B;
-  --color-border: #E2E8F0;
-  --color-border-light: #F1F5F9;
+  --color-dark: #003634;
+  --color-surface: #F4FAF9;
+  --color-text-primary: #0A2624;
+  --color-text-secondary: #4A6361;
+  --color-border: #D1E7E5;
+  --color-border-light: #E8F4F2;
 
-  --color-accent: #FF5252;
+  --color-accent: #72DCDC;
   --color-success: #10B981;
   --color-success-50: #ECFDF5;
   --color-warning: #F59E0B;
@@ -46,10 +50,10 @@
   --radius-pill: 9999px;
 
   /* Shadows */
-  --shadow-card: 0 1px 3px rgba(16, 25, 54, 0.05), 0 1px 2px rgba(16, 25, 54, 0.03);
-  --shadow-card-hover: 0 10px 30px rgba(16, 25, 54, 0.08), 0 2px 8px rgba(16, 25, 54, 0.04);
-  --shadow-elevated: 0 20px 40px rgba(16, 25, 54, 0.12), 0 4px 12px rgba(16, 25, 54, 0.06);
-  --shadow-glow: 0 0 25px rgba(229, 57, 53, 0.35);
+  --shadow-card: 0 1px 3px rgba(0, 77, 74, 0.05), 0 1px 2px rgba(0, 77, 74, 0.03);
+  --shadow-card-hover: 0 10px 30px rgba(0, 77, 74, 0.1), 0 2px 8px rgba(0, 77, 74, 0.05);
+  --shadow-elevated: 0 20px 40px rgba(0, 77, 74, 0.15), 0 4px 12px rgba(0, 77, 74, 0.08);
+  --shadow-glow: 0 0 25px rgba(0, 118, 107, 0.35);
 
   /* Animations */
   --animate-fade-in: fade-in 0.4s ease-out;
@@ -110,20 +114,20 @@ body {
 }
 
 .glass-dark {
-  background: rgba(16, 25, 54, 0.85);
+  background: rgba(0, 54, 52, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
 /* Gradient utilities */
 .gradient-avanto {
-  background: linear-gradient(135deg, #E53935 0%, #FF5252 100%);
+  background: linear-gradient(135deg, #00766B 0%, #008779 50%, #72DCDC 100%);
 }
 .gradient-avanto-dark {
-  background: linear-gradient(145deg, #101936 0%, #162044 50%, #0d152c 100%);
+  background: linear-gradient(145deg, #004D4A 0%, #003634 50%, #012B29 100%);
 }
 .gradient-avanto-text {
-  background: linear-gradient(135deg, #E53935 0%, #FF5252 100%);
+  background: linear-gradient(135deg, #00766B 0%, #008779 60%, #72DCDC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

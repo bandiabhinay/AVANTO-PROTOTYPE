@@ -36,27 +36,27 @@ export default function Captain({ onBecomeCaptain }: CaptainProps) {
   }
 
   return (
-    <section id="captain" className="bg-[#101936] text-white py-24 relative overflow-hidden">
-      {/* Background Ambient Radial Glows */}
-      <div className="absolute top-1/4 -right-24 w-96 h-96 bg-[#E53935]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FF5252]/15 rounded-full blur-3xl pointer-events-none" />
+    <section id="captain" className="bg-[#003634] text-white py-24 relative overflow-hidden">
+      {/* Background Ambient Radial Glows with Teal & Cyan */}
+      <div className="absolute top-1/4 -right-24 w-96 h-96 bg-[#00766B]/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#72DCDC]/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* ================= LEFT: Headline, Benefits & CTA ================= */}
           <div className="lg:col-span-6 flex flex-col items-start space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-rose-200 border border-white/10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-[#72DCDC] border border-[#72DCDC]/30">
               <span>💰 Captain Partner Program</span>
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
               <span>Drive & Earn</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FF5252] to-[#E53935]">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#72DCDC] to-[#2DD4BF]">
                 On Your Schedule
               </span>
             </h2>
 
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl">
+            <p className="text-emerald-100/80 text-base sm:text-lg leading-relaxed max-w-xl">
               Turn your time into income. Choose when, where and how you drive. Enjoy industry-best payouts, dedicated support, and medical protection.
             </p>
 
@@ -64,7 +64,7 @@ export default function Captain({ onBecomeCaptain }: CaptainProps) {
             <div className="space-y-3.5 w-full pt-2">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#E53935]/30 text-[#FF5252] flex items-center justify-center shrink-0 border border-[#FF5252]/30">
+                  <div className="w-6 h-6 rounded-full bg-[#00766B]/60 text-[#72DCDC] flex items-center justify-center shrink-0 border border-[#72DCDC]/40">
                     <Check className="w-3.5 h-3.5 stroke-[2.8]" />
                   </div>
                   <span className="text-gray-200 font-semibold text-sm sm:text-base">
@@ -79,11 +79,11 @@ export default function Captain({ onBecomeCaptain }: CaptainProps) {
               <button
                 type="button"
                 onClick={handleApply}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#E53935] hover:bg-[#C62828] text-white font-bold text-base rounded-full px-8 py-4 shadow-xl shadow-[#E53935]/35 hover:shadow-2xl transition-all cursor-pointer group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#00766B] hover:bg-[#008779] text-white font-bold text-base rounded-full px-8 py-4 shadow-xl shadow-[#00766B]/50 hover:shadow-2xl transition-all cursor-pointer group border border-[#72DCDC]/30"
               >
                 {applied ? (
                   <>
-                    <CheckCircle2 className="w-5 h-5 text-emerald-300" />
+                    <CheckCircle2 className="w-5 h-5 text-[#72DCDC]" />
                     <span>Application Sent! We'll call you.</span>
                   </>
                 ) : (
@@ -99,20 +99,20 @@ export default function Captain({ onBecomeCaptain }: CaptainProps) {
           {/* ================= RIGHT: Captain Dashboard Mockup ================= */}
           <div className="lg:col-span-6 relative">
             {/* Glow backdrop behind card */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-[#E53935]/30 via-[#FF5252]/20 to-red-600/30 rounded-3xl blur-2xl opacity-75 -z-10" />
+            <div className="absolute -inset-2 bg-gradient-to-r from-[#00766B]/40 via-[#72DCDC]/30 to-[#004D4A]/40 rounded-3xl blur-2xl opacity-75 -z-10" />
 
-            <div className="relative bg-[#162044]/95 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl">
+            <div className="relative bg-[#002B29]/95 border border-[#72DCDC]/20 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl">
               {/* Mockup Header */}
               <div className="flex items-center justify-between pb-5 border-b border-white/10">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center text-white font-black text-sm shadow-md">
+                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#00766B] to-[#72DCDC] flex items-center justify-center text-white font-black text-sm shadow-md">
                     AV
                   </div>
                   <div>
                     <div className="text-sm font-bold text-white tracking-wide">
                       Captain Dashboard
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
+                    <div className="flex items-center gap-1.5 text-xs text-[#72DCDC] font-semibold">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                       Online & Accepting Rides
                     </div>
@@ -167,7 +167,7 @@ export default function Captain({ onBecomeCaptain }: CaptainProps) {
                 </div>
 
                 {/* 7-Day Bar Chart */}
-                <div className="bg-[#101936]/80 rounded-2xl p-4 border border-white/5">
+                <div className="bg-[#001D1C]/80 rounded-2xl p-4 border border-[#72DCDC]/15">
                   <div className="flex items-end justify-between gap-2.5 h-28 pt-2">
                     {weeklyEarningsData.map((bar, idx) => (
                       <div key={idx} className="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
@@ -176,12 +176,12 @@ export default function Captain({ onBecomeCaptain }: CaptainProps) {
                             style={{ height: bar.height }}
                             className={`w-full max-w-[28px] rounded-t-lg transition-all duration-300 ${
                               bar.active
-                                ? 'bg-gradient-to-t from-[#E53935] to-[#FF5252] shadow-lg shadow-[#E53935]/50'
+                                ? 'bg-gradient-to-t from-[#00766B] to-[#72DCDC] shadow-lg shadow-[#00766B]/50'
                                 : 'bg-white/20 group-hover:bg-white/35'
                             }`}
                           />
                         </div>
-                        <span className={`text-[11px] font-semibold ${bar.active ? 'text-[#FF5252] font-bold' : 'text-gray-400'}`}>
+                        <span className={`text-[11px] font-semibold ${bar.active ? 'text-[#72DCDC] font-bold' : 'text-gray-400'}`}>
                           {bar.day}
                         </span>
                       </div>

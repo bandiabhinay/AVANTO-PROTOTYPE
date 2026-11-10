@@ -46,13 +46,13 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#E53935] bg-[#E53935]/10 mb-3 border border-[#E53935]/20">
+          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#00766B] bg-[#E0F7F6] mb-3 border border-[#00766B]/25">
             Rider Stories
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#101936] tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-[#003634] tracking-tight">
             Loved by 10M+ Riders
           </h2>
-          <p className="mt-3 text-lg text-gray-600">
+          <p className="mt-3 text-lg text-[#4A6361]">
             Real feedback from riders across 50+ cities in India.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function Testimonials() {
             <motion.div
               key={index}
               whileHover={{ y: -8 }}
-              className="bg-[#F5F7FC] rounded-3xl p-6 border border-slate-200/70 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="bg-[#F4FAF9] rounded-3xl p-6 border border-[#00766B]/15 shadow-sm hover:shadow-xl hover:border-[#00766B]/40 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -73,22 +73,22 @@ export default function Testimonials() {
                       <Star key={i} className="w-4 h-4 fill-amber-400" />
                     ))}
                   </div>
-                  <Quote className="w-6 h-6 text-[#E53935]/30" />
+                  <Quote className="w-6 h-6 text-[#00766B]/30" />
                 </div>
 
-                <p className="text-sm text-gray-700 leading-relaxed italic mb-6">
+                <p className="text-sm text-[#374151] leading-relaxed italic mb-6">
                   &ldquo;{item.review}&rdquo;
                 </p>
               </div>
 
               {/* Reviewer Details */}
-              <div className="pt-4 border-t border-slate-200/80 flex items-center gap-3">
+              <div className="pt-4 border-t border-[#00766B]/10 flex items-center gap-3">
                 <div className={`w-11 h-11 rounded-2xl bg-gradient-to-tr ${item.bg} text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0`}>
                   {item.avatar}
                 </div>
                 <div>
-                  <h4 className="font-extrabold text-[#101936] text-sm">{item.name}</h4>
-                  <span className="text-[11px] text-gray-500 font-medium">
+                  <h4 className="font-extrabold text-[#003634] text-sm">{item.name}</h4>
+                  <span className="text-[11px] text-[#4A6361] font-medium">
                     {item.role} • {item.city}
                   </span>
                 </div>

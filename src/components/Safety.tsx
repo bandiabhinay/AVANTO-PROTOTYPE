@@ -60,13 +60,13 @@ export default function Safety() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-rose-600 bg-rose-50 border border-rose-200 mb-3">
+          <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#00766B] bg-[#E0F7F6] border border-[#72DCDC]/40 mb-3">
             Peace of Mind
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#101936] tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-[#003634] tracking-tight">
             Your Safety Comes First
           </h2>
-          <p className="mt-4 text-lg text-gray-600 font-medium">
+          <p className="mt-4 text-lg text-[#4A6361] font-medium">
             Every Avanto ride is designed with safety at every step.
           </p>
         </div>
@@ -79,23 +79,23 @@ export default function Safety() {
               <motion.div
                 animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.4, 0.15] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute inset-0 rounded-full border-2 border-dashed border-[#E53935]/30"
+                className="absolute inset-0 rounded-full border-2 border-dashed border-[#72DCDC]/50"
               />
 
               {/* Middle pulsing ring */}
               <motion.div
                 animate={{ scale: [1, 1.08, 1], opacity: [0.25, 0.55, 0.25] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-                className="absolute inset-8 rounded-full border-2 border-[#E53935]/40 bg-[#E53935]/5"
+                className="absolute inset-8 rounded-full border-2 border-[#00766B]/30 bg-[#00766B]/5"
               />
 
               {/* Central Glowing Shield Badge */}
               <motion.div
                 whileHover={{ scale: 1.04 }}
-                className="relative z-10 w-36 h-36 rounded-3xl bg-gradient-to-tr from-[#101936] via-[#E53935] to-[#FF5252] text-white flex flex-col items-center justify-center shadow-2xl shadow-[#E53935]/40 p-4 text-center border-2 border-white/20"
+                className="relative z-10 w-36 h-36 rounded-3xl bg-gradient-to-tr from-[#004D4A] via-[#00766B] to-[#72DCDC] text-white flex flex-col items-center justify-center shadow-2xl shadow-[#00766B]/40 p-4 text-center border-2 border-white/20"
               >
                 <ShieldCheck className="w-14 h-14 stroke-[2] mb-1 text-white" />
-                <span className="text-xs font-extrabold tracking-wider uppercase text-rose-100">
+                <span className="text-xs font-extrabold tracking-wider uppercase text-[#E0F7F6]">
                   100% Verified
                 </span>
               </motion.div>
@@ -104,9 +104,9 @@ export default function Safety() {
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute top-4 right-0 bg-white shadow-lg border border-slate-100 px-3 py-1.5 rounded-full flex items-center gap-1.5 text-xs font-bold text-[#101936]"
+                className="absolute top-4 right-0 bg-white shadow-lg border border-[#D1E7E5] px-3 py-1.5 rounded-full flex items-center gap-1.5 text-xs font-bold text-[#003634]"
               >
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                <span className="w-2 h-2 rounded-full bg-[#72DCDC] animate-ping" />
                 <span>24/7 Incident Desk</span>
               </motion.div>
 

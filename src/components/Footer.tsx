@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation } from 'lucide-react'
+import AvantoLogo from './AvantoLogo'
 
 // Custom clean SVG icons for all requested social links
 const XIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
@@ -69,29 +69,19 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#0b1226] text-white border-t border-white/5">
+    <footer className="bg-[#001D1C] text-white border-t border-[#004D4A]/50">
       {/* Main Footer Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Brand Info Column */}
           <div className="lg:col-span-2 space-y-4">
-            <a href="#home" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center shadow-md">
-                <Navigation className="w-5 h-5 text-white" />
-              </div>
-              <div className="flex flex-col text-left justify-center">
-                <span className="text-xl sm:text-2xl font-black tracking-tight leading-none text-white">
-                  AVANTO
-                </span>
-                <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.25em] text-gray-400 leading-tight mt-0.5 pl-0.5">
-                  RIDE
-                </span>
-              </div>
+            <a href="#home" className="inline-block">
+              <AvantoLogo variant="dark" size="md" />
             </a>
-            <p className="text-gray-400 text-sm font-semibold tracking-wide">
-              Smart Mobility. Simple Rides.
+            <p className="text-[#72DCDC] text-sm font-semibold tracking-wide">
+              Move with confidence. Your ride, our priority.
             </p>
-            <p className="text-gray-400 text-xs leading-relaxed max-w-sm">
+            <p className="text-teal-100/70 text-xs leading-relaxed max-w-sm">
               Connecting millions of commuters across India with verified local captains through fast, affordable and dependable mobility technology.
             </p>
 
@@ -104,7 +94,7 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#E53935] flex items-center justify-center transition-colors text-gray-300 hover:text-white border border-white/5"
+                    className="w-9 h-9 rounded-xl bg-white/5 hover:bg-[#00766B] flex items-center justify-center transition-colors text-teal-100 hover:text-white border border-white/10"
                   >
                     <Icon className="w-4 h-4" />
                   </a>
@@ -116,7 +106,7 @@ export default function Footer() {
           {/* Links Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="text-xs font-bold uppercase tracking-wider text-gray-300 mb-4">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-teal-200 mb-4">
                 {category}
               </h3>
               <ul className="space-y-2.5">
@@ -130,7 +120,7 @@ export default function Footer() {
                           handleScroll(link.href)
                         }
                       }}
-                      className="text-xs text-gray-400 hover:text-[#FF5252] transition-colors font-medium"
+                      className="text-xs text-teal-100/70 hover:text-[#72DCDC] transition-colors font-medium"
                     >
                       {link.label}
                     </a>
@@ -143,17 +133,17 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/5 bg-[#080d1c]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+      <div className="border-t border-[#004D4A]/50 bg-[#001514]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-teal-100/50">
           <p>© 2026 Avanto. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <a href="#" className="hover:text-teal-200 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <a href="#" className="hover:text-teal-200 transition-colors">
               Terms &amp; Conditions
             </a>
-            <a href="#home" className="hover:text-[#FF5252] transition-colors">
+            <a href="#home" className="hover:text-[#72DCDC] transition-colors">
               Back to Top ↑
             </a>
           </div>

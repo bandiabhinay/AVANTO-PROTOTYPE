@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Navigation, Menu, X, ArrowRight, Smartphone } from 'lucide-react'
+import { Menu, X, ArrowRight, Smartphone } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import AvantoLogo from './AvantoLogo'
 
 interface NavbarProps {
   onOpenBooking: () => void
@@ -63,30 +64,20 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo with new official emblem */}
           <a
             href="#home"
             onClick={(e) => {
               e.preventDefault()
               handleNavClick('#home')
             }}
-            className="flex items-center gap-2.5 group cursor-pointer"
+            className="group cursor-pointer"
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#E53935] to-[#FF5252] flex items-center justify-center shadow-md shadow-[#E53935]/25 group-hover:scale-105 transition-transform duration-200">
-              <Navigation className="w-5 h-5 text-white" />
-            </div>
-            <div className="flex flex-col text-left justify-center">
-              <span className="text-xl sm:text-2xl font-black tracking-tight leading-none text-[#E53935]">
-                AVANTO
-              </span>
-              <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#64748B] leading-tight mt-0.5 pl-0.5">
-                RIDE
-              </span>
-            </div>
+            <AvantoLogo variant="light" size="md" />
           </a>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2 bg-white/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-200/60 shadow-sm">
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2 bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#D1E7E5]/70 shadow-sm">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id
               return (
@@ -99,15 +90,15 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                   }}
                   className={`relative px-4 py-1.5 text-sm font-semibold rounded-full transition-all duration-200 ${
                     isActive
-                      ? 'text-[#E53935]'
-                      : 'text-gray-600 hover:text-[#101936] hover:bg-slate-100/60'
+                      ? 'text-[#00766B]'
+                      : 'text-gray-600 hover:text-[#004D4A] hover:bg-slate-100/60'
                   }`}
                 >
                   {link.label}
                   {isActive && (
                     <motion.div
                       layoutId="activeIndicator"
-                      className="absolute inset-0 bg-[#E53935]/10 rounded-full -z-10 border border-[#E53935]/20"
+                      className="absolute inset-0 bg-[#00766B]/10 rounded-full -z-10 border border-[#00766B]/25"
                       transition={{ type: 'spring', stiffness: 350, damping: 30 }}
                     />
                   )}
@@ -124,16 +115,16 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                 e.preventDefault()
                 handleNavClick('#download')
               }}
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-[#101936] hover:text-[#E53935] hover:bg-slate-100/70 rounded-full transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-[#004D4A] hover:text-[#00766B] hover:bg-[#E0F7F6]/60 rounded-full transition-colors"
             >
-              <Smartphone className="w-4 h-4 text-[#E53935]" />
+              <Smartphone className="w-4 h-4 text-[#00766B]" />
               <span>Download App</span>
             </a>
 
             <button
               type="button"
               onClick={onOpenBooking}
-              className="inline-flex items-center gap-2 bg-[#E53935] hover:bg-[#C62828] text-white text-sm font-bold rounded-full px-5 py-2.5 shadow-md shadow-[#E53935]/30 hover:shadow-lg hover:shadow-[#E53935]/40 hover:-translate-y-0.5 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#00766B] hover:bg-[#004D4A] text-white text-sm font-bold rounded-full px-5 py-2.5 shadow-md shadow-[#00766B]/30 hover:shadow-lg hover:shadow-[#00766B]/40 hover:-translate-y-0.5 transition-all cursor-pointer"
             >
               <span>Book a Ride</span>
               <ArrowRight className="w-4 h-4" />
@@ -144,7 +135,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-xl text-gray-700 hover:bg-gray-100 hover:text-[#E53935] transition-colors"
+            className="md:hidden p-2 rounded-xl text-gray-700 hover:bg-[#E0F7F6] hover:text-[#00766B] transition-colors"
             aria-label="Toggle navigation menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -175,7 +166,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                     }}
                     className={`block px-4 py-2.5 rounded-xl text-base font-semibold transition-colors ${
                       isActive
-                        ? 'bg-[#E53935]/10 text-[#E53935]'
+                        ? 'bg-[#00766B]/10 text-[#00766B]'
                         : 'text-gray-700 hover:bg-slate-100'
                     }`}
                   >
@@ -191,9 +182,9 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                     e.preventDefault()
                     handleNavClick('#download')
                   }}
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-gray-200 font-semibold text-sm text-[#101936] hover:bg-gray-50"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-gray-200 font-semibold text-sm text-[#004D4A] hover:bg-gray-50"
                 >
-                  <Smartphone className="w-4 h-4 text-[#E53935]" />
+                  <Smartphone className="w-4 h-4 text-[#00766B]" />
                   <span>Download App</span>
                 </a>
 
@@ -203,7 +194,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
                     setIsOpen(false)
                     onOpenBooking()
                   }}
-                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#E53935] text-white font-bold text-sm shadow-md shadow-[#E53935]/30"
+                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#00766B] text-white font-bold text-sm shadow-md shadow-[#00766B]/30"
                 >
                   <span>Book a Ride</span>
                   <ArrowRight className="w-4 h-4" />
