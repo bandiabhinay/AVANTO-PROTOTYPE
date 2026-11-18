@@ -63,7 +63,13 @@ export default function Footer() {
       const id = href.replace('#', '')
       const el = document.getElementById(id)
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth' })
+        const navHeight = 75
+        const elementPosition = el.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth',
+        })
       }
     }
   }

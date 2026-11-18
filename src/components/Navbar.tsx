@@ -24,16 +24,27 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
 
-      // Section spy
-      const sections = ['home', 'ride', 'captain', 'safety', 'about', 'download']
-      const scrollPosition = window.scrollY + 200
+      // Active section spy using getBoundingClientRect
+      const sections = ['home', 'ride', 'captain', 'safety', 'about']
+      const navOffset = 130
 
-      for (const sectionId of sections) {
+      if (window.scrollY < 80) {
+        setActiveSection('home')
+        return
+      }
+
+      // If user reaches near the bottom of the page, activate the last section
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+        setActiveSection('about')
+        return
+      }
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sectionId = sections[i]
         const el = document.getElementById(sectionId)
         if (el) {
-          const top = el.offsetTop
-          const height = el.offsetHeight
-          if (scrollPosition >= top && scrollPosition < top + height) {
+          const rect = el.getBoundingClientRect()
+          if (rect.top <= navOffset) {
             setActiveSection(sectionId)
             break
           }
@@ -42,15 +53,23 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const handleNavClick = (href: string) => {
     setIsOpen(false)
     const targetId = href.replace('#', '')
+    setActiveSection(targetId)
     const el = document.getElementById(targetId)
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
+      const navHeight = 75
+      const elementPosition = el.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: 'smooth',
+      })
     }
   }
 

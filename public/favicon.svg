@@ -1,12 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#004D4A"/>
+      <stop offset="60%" stop-color="#00766B"/>
+      <stop offset="100%" stop-color="#008779"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <path d="M32 12L18 48h6l2.8-7.5h10.4L40 48h6L32 12zm0 12l4 12h-8l4-12z" fill="white"/>
-  <circle cx="44" cy="18" r="4" fill="#F97316"/>
-  <circle cx="44" cy="18" r="2" fill="white"/>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <!-- Official Folded geometric A emblem -->
+  <path d="M25 12 L13 52 L22 52 L34 12 Z" fill="#FFFFFF"/>
+  <path d="M35 27 L51 27 L41 38 L31 38 Z" fill="#72DCDC"/>
+  <path d="M30 41 L46 41 L36 52 L26 52 Z" fill="#FFFFFF" opacity="0.95"/>
 </svg>
