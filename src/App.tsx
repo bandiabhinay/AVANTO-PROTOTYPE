@@ -81,44 +81,26 @@ export default function App() {
 
   if (isOffline) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#002B29] via-[#004D4A] to-[#001D1C] text-white flex flex-col justify-between items-center px-4 py-12 relative overflow-hidden selection:bg-[#72DCDC] selection:text-[#004D4A]">
+      <div className="min-h-screen bg-gradient-to-b from-[#002B29] via-[#004D4A] to-[#001D1C] text-white flex flex-col justify-between items-center px-4 py-16 relative overflow-hidden select-none">
         {/* Ambient background glows */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#72DCDC]/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#00766B]/20 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#72DCDC]/10 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#00766B]/20 rounded-full blur-[120px] pointer-events-none" />
 
-        {/* Top Header */}
-        <div className="w-full max-w-4xl flex items-center justify-center pt-4 relative z-10">
-          <AvantoLogo variant="dark" size="lg" />
-        </div>
+        <div className="w-full" />
 
-        {/* Main Center Message */}
-        <div className="max-w-xl mx-auto text-center px-4 py-8 relative z-10 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#72DCDC] text-xs font-semibold backdrop-blur-md">
+        {/* Center: Official Logo + Minimal Coming Soon */}
+        <div className="flex flex-col items-center justify-center text-center relative z-10 space-y-6">
+          <AvantoLogo variant="dark" size="xl" />
+
+          <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/10 border border-white/15 text-teal-100 text-xs sm:text-sm font-semibold tracking-widest uppercase backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-[#72DCDC] animate-pulse" />
-            <span>Under Scheduled Development</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-            We’re Getting Ready <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-[#72DCDC] to-emerald-300">
-              For Launch.
-            </span>
-          </h1>
-
-          <p className="text-teal-100/80 text-sm sm:text-base leading-relaxed max-w-md mx-auto">
-            Our passenger and captain platforms are currently in private development and undergoing final testing. We look forward to moving with you soon.
-          </p>
-
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <div className="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-teal-200/90 text-xs sm:text-sm font-medium">
-              Launching Soon Across India 🇮🇳
-            </div>
+            <span>Coming Soon</span>
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="w-full text-center relative z-10 pt-8 pb-4 text-xs text-teal-200/50">
-          <p>© {new Date().getFullYear()} Avanto Ride. Move with confidence.</p>
+        {/* Minimal Copyright */}
+        <div className="w-full text-center relative z-10 text-xs text-teal-200/40">
+          <p>© {new Date().getFullYear()} Avanto. All rights reserved.</p>
         </div>
       </div>
     )

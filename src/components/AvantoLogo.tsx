@@ -29,7 +29,7 @@ export default function AvantoLogo({
     <div className={`inline-flex items-center select-none ${className}`}>
       <img
         src={logoSrc}
-        alt="Avanto - Move with confidence"
+        alt="Avanto"
         className={`${sizeClasses[size] || 'h-11'} w-auto object-contain transition-transform duration-200 group-hover:scale-105`}
         loading="eager"
       />
